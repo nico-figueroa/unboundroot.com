@@ -59,7 +59,8 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.75rem 2rem;
+    padding: 0.15rem 2rem;
+    min-height: 7rem;
     background: var(--nav-bg);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
@@ -70,11 +71,16 @@ a:hover {
     display: flex;
     align-items: center;
     flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
 .logo img {
-    max-height: 5rem;
+    height: calc(100% - 0.1rem);
     width: auto;
+    max-height: 6.8rem;
+    display: block;
 }
 
 .nav-links {
@@ -110,19 +116,19 @@ a:hover {
 
 .page-section h2 {
     margin-bottom: 1rem;
-    font-size: clamp(2.25rem, 3.5vw, 3rem);
+    font-size: clamp(1.6rem, 3.2vw, 2.6rem);
 }
 
 .page-section h3 {
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 2.4vw, 1.6rem);
 }
 
 #services h3 {
-    font-size: 2rem;
+    font-size: clamp(1.4rem, 2.8vw, 2rem);
 }
 
 .page-section p {
-    font-size: 2rem;
+    font-size: clamp(1rem, 1.8vw, 1.25rem);
     max-width: 60ch;
     margin: 0 auto 1rem;
 }
@@ -156,7 +162,7 @@ a:hover {
 }
 
 .hero h1 {
-    font-size: clamp(3rem, 7vw, 8rem);
+    font-size: clamp(2.2rem, 7vw, 5.5rem);
     margin: 0.25rem 0;
 }
 
@@ -275,6 +281,29 @@ a:hover {
     min-height: 8rem;
 }
 
+.form-status {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    margin-top: 0.25rem;
+    font-size: 0.95rem;
+    display: none;
+}
+
+.form-status.success {
+    display: block;
+    background: rgba(0, 170, 255, 0.15);
+    border: 1px solid var(--accent-color);
+    color: #7fe3ff;
+}
+
+.form-status.error {
+    display: block;
+    background: rgba(255, 80, 80, 0.15);
+    border: 1px solid #ff5050;
+    color: #ffb0b0;
+}
+
 .site-footer {
     width: 100%;
     text-align: center;
@@ -283,12 +312,17 @@ a:hover {
 
 @media only screen and (max-width: 768px) {
     .navbar {
-        padding: 0.75rem 1rem;
+        padding: 0.15rem 1rem;
+        min-height: 6rem;
+    }
+
+    .logo img {
+        max-height: 5.5rem;
     }
 
     .nav-links a {
-        font-size: 1rem;
-        padding: 0.5rem;
+        font-size: clamp(0.9rem, 2.4vw, 1rem);
+        padding: 0.4rem 0.55rem;
     }
 
     .hero {
@@ -296,8 +330,27 @@ a:hover {
     }
 
     .hero h1 {
-        font-size: clamp(2rem, 10vw, 5rem);
+        font-size: clamp(2rem, 8vw, 3.5rem);
         padding: 0 1rem;
+    }
+
+    .page-section h2 {
+        font-size: clamp(1.35rem, 5vw, 1.8rem);
+    }
+
+    .page-section h3 {
+        font-size: clamp(1.05rem, 3.5vw, 1.35rem);
+    }
+
+    .page-section p,
+    .page-section span {
+        font-size: clamp(0.95rem, 2.8vw, 1.05rem);
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form input[type="submit"] {
+        font-size: clamp(0.95rem, 2.6vw, 1rem);
     }
 
     .card-list {

@@ -33,17 +33,20 @@
           <p>Phone: +1 (916) 270-7964</p>
           <p>Address: 6408 Seaglass Ave SE</p>
           <p>Port Orchard, WA, 98367</p>
-          <a class="email-link" href="mailto:contact@unboundroot.com">Email Us: contact@unboundroot.com</a>
+          <a class="email-link" href="mailto:contact@unboundroot.com">Email Us: nitem18@hotmail.com</a>
         </div>
 
         <h3>Or tell us about your needs:</h3>
-        <form class="contact-form" action="./main.js" method="POST">
+        <form class="contact-form" action="https://formsubmit.co/808f6043738842ee576f3649aae5f049" method="POST">
           <label for="name">Name:</label>
           <input type="text" id="name" name="name" placeholder="Your Name" required>
           <label for="email">Email:</label>
           <input type="email" id="email" name="email" placeholder="someone@example.com" required>
           <label for="message">Message:</label>
           <textarea id="message" rows="8" name="message" placeholder="Hello Unbound Root, I want to ask about the following services ..."></textarea>
+          <input type="hidden" name="_subject" value="New message from Unbound Root website">
+          <input type="hidden" name="_captcha" value="false">
+          <div id="form-status" class="form-status" aria-live="polite"></div>
           <input type="submit" value="Submit">
         </form>
       </section>
@@ -68,5 +71,7 @@
         </a>
       </div> -->
     </footer>
+
+    <script src="./main.js"></script>
   </body>
 </html>
