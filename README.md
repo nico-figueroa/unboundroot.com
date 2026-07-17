@@ -1,8 +1,6 @@
 # Unbound Root Website
 
-## Access the published site at https://www.unboundroot.com
-
-### Programming languages used:
+## Programming languages used:
 * HTML
 * CSS
 * JavaScript
