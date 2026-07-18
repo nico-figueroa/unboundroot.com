@@ -6,7 +6,7 @@
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; frame-src 'none'; frame-ancestors 'none';">
     <meta http-equiv="Strict-Transport-Security" content="max-age=63072000; includeSubDomains; preload">
-    <meta name="description" content="Unbound Root blends creative business strategy, digital education, and process design to help individuals and organizations grow with purpose.">
+    <meta name="description" content="Unbound Root provides family-focused cybersecurity education: short video lessons, downloadable guides, and personalized assessments to help parents protect children online.">
     <link rel="shortcut icon" href="./images/ur_logo_favicon.png" type="image/x-icon">
     <link href="styles.css" rel="stylesheet">
     <title>Unbound Root</title>
@@ -18,46 +18,48 @@
         <img src="./images/unboundroot_logo.png" alt="Unbound Root Logo">
       </div>
       <ul class="nav-links" id="nav-links">
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./about.html">About</a></li>
-        <li><a href="./services.html">Services</a></li>
-        <li><a href="./contact.html">Contact</a></li>
-      </ul>
-    </nav>
-
-    <section class="hero page-section" id="home">
-      <div>
-        <h1>Unbound Root</h1>
-        <h1>Creation &amp; Education</h1>
-      </div>
-    </section>
+          <li><a href="./index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="./about.html" data-i18n="nav.about">About</a></li>
+          <li><a href="./services.html" data-i18n="nav.services">Services</a></li>
+          <li><a href="./contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+        <div id="language-switcher" class="language-switcher" data-i18n-attr="aria-label" data-i18n="nav.languageSwitcher">
+          <button type="button" data-lang="en">EN</button>
+          <button type="button" data-lang="es">ES</button>
+        </div>
+      </nav>
 
     <main class="page-shell">
+      <section class="hero page-section" id="hero">
+        <h1 data-i18n="hero.title">Family Cybersecurity Education</h1>
+        <p class="muted" data-i18n="hero.subtitle">Short lessons, downloadable guides, and tailored assessments to keep your family safer online.</p>
+        <p style="margin-top:0.75rem;"><a class="btn-primary" href="./services.html#assessment" data-i18n="hero.cta">Request a personalized assessment</a></p>
+      </section>
       <section class="page-section" id="about">
-        <h2>Our vision</h2>
-        <p>Creativity, quality, holistic and disruptive approaches are at the heart of everything we do. We believe in empowering everyone to explore their potential and make a meaningful impact in their communities and organizations.</p>
+        <h2 data-i18n="about.title">Our vision</h2>
+        <p data-i18n="about.text">We help families navigate the digital world with confidence. Our mission is to provide practical, research-backed education and resources so parents can protect and empower their children online.</p>
       </section>
 
       <section class="page-section" id="services">
-        <h2>Curious?</h2>
-        <h3>Choose what's next!</h3>
+        <h2 data-i18n="services.intro.title">Keep your family safe online</h2>
+        <h3 data-i18n="services.intro.text">Start here</h3>
         <ul class="card-list" role="list">
           <li class="card-item">
-            <a href="./about.html" class="card-link">
-              <img src="./images/team.avif" alt="Team Image">
-              <span>Get to know us</span>
+            <a href="./services.html#offerings" class="card-link">
+              <img src="./images/creation.jpg" alt="Featured lesson thumbnail">
+              <span data-i18n="services.lesson.title">Featured lesson: Parental Controls</span>
             </a>
           </li>
           <li class="card-item">
-            <a href="./services.html" class="card-link">
-              <img src="./images/creation.jpg" alt="Do Something Great Sign">
-              <span>Review our services</span>
+            <a href="./services.html#assessment" class="card-link">
+              <img src="./images/plan.jpg" alt="Assessment placeholder">
+              <span data-i18n="services.assessment.submit">Request a personalized assessment</span>
             </a>
           </li>
           <li class="card-item">
-            <a href="./contact.html" class="card-link">
-              <img src="./images/contact.avif" alt="Woman holding phone in hand with laptop">
-              <span>Connect with us</span>
+            <a href="./services.html#topics" class="card-link">
+              <img src="./images/education.jpg" alt="Topics covered">
+              <span data-i18n="services.topics.title">Topics we cover</span>
             </a>
           </li>
         </ul>
@@ -84,5 +86,7 @@
         </a> -->
       </div>
     </footer>
+
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html>

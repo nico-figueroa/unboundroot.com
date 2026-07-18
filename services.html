@@ -6,7 +6,7 @@
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; frame-src 'none'; frame-ancestors 'none';">
     <meta http-equiv="Strict-Transport-Security" content="max-age=63072000; includeSubDomains; preload">
-    <meta name="description" content="View Unbound Root's full service offering, including creative consultation, education programs, process improvement, and business support.">
+    <meta name="description" content="Cybersecurity education for families: videos, downloadable resources, and personalized assessments to help parents protect children online.">
     <link rel="shortcut icon" href="./images/ur_logo_favicon.png" type="image/x-icon">
     <link href="styles.css" rel="stylesheet">
     <title>Services</title>
@@ -18,32 +18,129 @@
         <img src="./images/unboundroot_logo.png" alt="Unbound Root Logo">
       </div>
       <ul class="nav-links" id="nav-links">
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./about.html">About</a></li>
-        <li><a href="./services.html">Services</a></li>
-        <li><a href="./contact.html">Contact</a></li>
-      </ul>
-    </nav>
+          <li><a href="./index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="./about.html" data-i18n="nav.about">About</a></li>
+          <li><a href="./services.html" data-i18n="nav.services">Services</a></li>
+          <li><a href="./contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+        <div id="language-switcher" class="language-switcher" data-i18n-attr="aria-label" data-i18n="nav.languageSwitcher">
+          <button type="button" data-lang="en">EN</button>
+          <button type="button" data-lang="es">ES</button>
+        </div>
+      </nav>
 
     <main class="page-shell">
       <section class="page-section" id="services-intro">
-        <h2>What we can do for you</h2>
-        <p>As a result of a very diverse and versatile team, we offer a wide range of services tailored to meet your unique needs.</p>
+        <p data-i18n="services.intro.text">We focus exclusively on helping families stay safe online through short videos, downloadable guides, and personalized assessments with clear recommendations.</p>
       </section>
 
-      <section class="page-section" id="service-options">
-        <h2>What's on your mind?</h2>
+      <section class="page-section" id="offerings">
+        <h2 data-i18n="services.offerings.title">Products & Resources</h2>
+        <p data-i18n="services.offerings.text">Our main offerings are digital: video lessons and downloadable files (guides, checklists, policy templates). Below is a sample lesson and a downloadable guide to illustrate how content will appear.</p>
+
+        <div class="media-grid">
+          <article class="media-card">
+            <div class="media-preview">
+              <!-- Embed a public sample video as a placeholder (replace with real lesson video) -->
+              <iframe src="https://www.youtube.com/embed/YE7VzlLtp-4" title="Sample lesson video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <h3 data-i18n="services.lesson.title">Sample lesson: Parental Controls</h3>
+            <p class="muted" data-i18n="services.lesson.text">Example video to show layout. Replace with your lesson media when available.</p>
+            <a class="btn-primary" href="./services.html#offerings" data-i18n="services.lesson.button">View lesson</a>
+          </article>
+
+          <article class="media-card">
+            <div class="media-preview file">
+              <img src="./images/creation.jpg" alt="Downloadable guide placeholder">
+            </div>
+            <h3 data-i18n="services.download.title">Download: Phishing Protection Guide</h3>
+            <p class="muted" data-i18n="services.download.text">A printable checklist for parents and kids.</p>
+            <a class="btn-primary" href="#" data-i18n="services.download.button">Download sample</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="page-section" id="assessment">
+        <h2 data-i18n="services.assessment.title">Personalized Assessment & Recommendations</h2>
+        <p data-i18n="services.assessment.text">Get a tailored plan for your family's needs. Fill the short assessment and we'll provide recommended learning paths and resources.</p>
+
+        <form class="contact-form assessment-form" action="https://formsubmit.co/808f6043738842ee576f3649aae5f049" method="post" aria-label="Family cybersecurity assessment">
+          <label data-i18n="services.assessment.parent_name">Parent name</label>
+          <input type="text" name="parent_name" placeholder="Your name" data-i18n-placeholder="services.assessment.parent_name">
+
+          <label data-i18n="services.assessment.email">Email</label>
+          <input type="email" name="email" placeholder="you@example.com" data-i18n-placeholder="services.assessment.email">
+
+          <label data-i18n="services.assessment.children_ages">Children (ages)</label>
+          <input type="text" name="children_ages" placeholder="e.g. 3, 7, 12" data-i18n-placeholder="services.assessment.children_ages">
+
+          <label data-i18n="services.assessment.concern">Areas of concern</label>
+          <select name="concern" aria-label="primary concern">
+            <option value="ParentalControls" data-i18n="services.assessment.concern.ParentalControls">Parental Controls</option>
+            <option value="PhishingProtection" data-i18n="services.assessment.concern.PhishingProtection">Phishing Protection</option>
+            <option value="OnlinePredators" data-i18n="services.assessment.concern.OnlinePredators">Online Predators</option>
+            <option value="DigitalHygiene" data-i18n="services.assessment.concern.DigitalHygiene">Digital Hygiene</option>
+            <option value="FamilyDynamics" data-i18n="services.assessment.concern.FamilyDynamics">Family Dynamics</option>
+            <option value="ComputerLiteracy" data-i18n="services.assessment.concern.ComputerLiteracy">Computer Literacy</option>
+            <option value="MalwareProtection" data-i18n="services.assessment.concern.MalwareProtection">Malware Protection</option>
+          </select>
+
+          <label data-i18n="services.assessment.details">Additional details</label>
+          <textarea name="details" placeholder="Tell us briefly about your situation" data-i18n-placeholder="services.assessment.details.placeholder"></textarea>
+
+          <input type="hidden" name="_subject" value="Personalized assessment request">
+          <input type="hidden" name="_captcha" value="false">
+          <div class="form-status" aria-live="polite"></div>
+          <button type="submit" class="btn-primary" data-i18n="services.assessment.submit">Request assessment</button>
+          <p class="muted" data-i18n="services.assessment.note">Note: form is a placeholder. Submissions will be routed to our assessment workflow when enabled.</p>
+        </form>
+      </section>
+
+      <section class="page-section" id="topics">
+        <h2 data-i18n="services.topics.title">Topics Covered</h2>
+        <p data-i18n="services.topics.description">Below are the core topics we teach — each will have a short lesson video and supporting files.</p>
+
         <ul class="card-list" role="list">
           <li class="card-item">
-            <a href="./creation_services.html" class="card-link">
-              <img src="./images/creation.jpg" alt="Do Something Great Sign">
-              <span>Creation</span>
+            <a href="#" class="card-link">
+              <img src="./images/process_improvement.avif" alt="Parental Controls">
+              <span>Parental Controls</span>
             </a>
           </li>
           <li class="card-item">
-            <a href="./education_services.html" class="card-link">
-              <img src="./images/education.jpg" alt="Collaborating and learning">
-              <span>Education</span>
+            <a href="#" class="card-link">
+              <img src="./images/code.avif" alt="Phishing protection">
+              <span>Phishing protection</span>
+            </a>
+          </li>
+          <li class="card-item">
+            <a href="#" class="card-link">
+              <img src="./images/mentorship.avif" alt="Online predators">
+              <span>Online predators' identification and protection</span>
+            </a>
+          </li>
+          <li class="card-item">
+            <a href="#" class="card-link">
+              <img src="./images/plan.jpg" alt="Digital hygiene">
+              <span>Digital product usage hygiene</span>
+            </a>
+          </li>
+          <li class="card-item">
+            <a href="#" class="card-link">
+              <img src="./images/sleep_baby.avif" alt="Family dynamics">
+              <span>Effects of digital use in family dynamics</span>
+            </a>
+          </li>
+          <li class="card-item">
+            <a href="#" class="card-link">
+              <img src="./images/computer_literacy.avif" alt="Computer literacy">
+              <span>Computer literacy for parents and children</span>
+            </a>
+          </li>
+          <li class="card-item">
+            <a href="#" class="card-link">
+              <img src="./images/coding.avif" alt="Malware protection">
+              <span>Malware protection techniques</span>
             </a>
           </li>
         </ul>
@@ -53,5 +150,7 @@
     <footer class="site-footer">
       <p>&copy; 2026 Unbound Root. All rights reserved.</p>
     </footer>
+
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html>

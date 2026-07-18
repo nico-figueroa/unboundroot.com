@@ -18,17 +18,21 @@
         <img src="./images/unboundroot_logo.png" alt="Unbound Root Logo">
       </div>
       <ul class="nav-links" id="nav-links">
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./about.html">About</a></li>
-        <li><a href="./services.html">Services</a></li>
-        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="./index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="./about.html" data-i18n="nav.about">About</a></li>
+        <li><a href="./services.html" data-i18n="nav.services">Services</a></li>
+        <li><a href="./contact.html" data-i18n="nav.contact">Contact</a></li>
       </ul>
+      <div id="language-switcher" class="language-switcher" data-i18n-attr="aria-label" data-i18n="nav.languageSwitcher">
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="es">ES</button>
+      </div>
     </nav>
 
     <main class="page-shell">
       <section class="page-section" id="services-intro">
-        <h2>Our Creation Services</h2>
-        <h3>As a result of a very diverse and versatile team, we offer a wide range of services tailored to meet your unique needs.</h3>
+        <h2 data-i18n="creation.title">Our Creation Services</h2>
+        <h3 data-i18n="creation.subtitle">As a result of a very diverse and versatile team, we offer a wide range of services tailored to meet your unique needs.</h3>
       </section>
 
       <section class="page-section" id="creation-services">
@@ -37,31 +41,31 @@
           <li class="card-item service-card" data-title="Programming" data-description="Freelance, Contract or Full-time coding services in HTML, CSS, JavaScript, and Python." data-price="Per Hour" data-conditions="Beginner level coding services are available at a discounted rate.">
             <a href="#" class="card-link">
               <img src="./images/coding.avif" alt="Coding interface">
-              <span>Programming</span>
+              <span data-i18n="creation.service.programming">Programming</span>
             </a>
           </li>
           <li class="card-item service-card" data-title="Process Design and Improvement" data-description="Services to design and improve your business processes for better efficiency and effectiveness." data-price="Per Project" data-conditions="Consulting services are available for process design and improvement.">
             <a href="#" class="card-link">
               <img src="./images/process_improvement.avif" alt="Sticky notes on board">
-              <span>Process Design and Improvement</span>
+              <span data-i18n="creation.service.process">Process Design and Improvement</span>
             </a>
           </li>
           <li class="card-item service-card" data-title="Business and Systems Analysis" data-description="Services for analyzing business and systems to identify opportunities for improvement." data-price="Per Hour" data-conditions="Consulting services are available for business and systems analysis.">
             <a href="#" class="card-link">
               <img src="./images/business_analyst.avif" alt="Business Analysis">
-              <span>Business and Systems Analysis</span>
+              <span data-i18n="creation.service.analysis">Business and Systems Analysis</span>
             </a>
           </li>
           <li class="card-item service-card" data-title="Team Building and Coaching Activities" data-description="Engaging team building and coaching activities to foster collaboration and communication within your organization." data-price="Per Event" data-conditions="Consulting services are available for team building and coaching activities.">
             <a href="#" class="card-link">
               <img src="./images/experience.png" alt="Team activity illustration">
-              <span>Team Building and Coaching Activities</span>
+              <span data-i18n="creation.service.team">Team Building and Coaching Activities</span>
             </a>
           </li>
           <li class="card-item service-card" data-title="Software Engineering" data-description="Freelance, Contract or Full-time software engineering services." data-price="Per Hour" data-conditions="Consulting services are available for software engineering.">
             <a href="#" class="card-link">
               <img src="./images/code.avif" alt="Code on screen">
-              <span>Software Engineering</span>
+              <span data-i18n="creation.service.software">Software Engineering</span>
             </a>
           </li>
         </ul>
@@ -69,9 +73,9 @@
     </main>
 
     <footer class="site-footer">
-      <p>&copy; 2026 Unbound Root. All rights reserved.</p>
+      <p data-i18n="footer.copyright">© 2026 Unbound Root. All rights reserved.</p>
     </footer>
 
-    <script src="./main.js"></script>
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html>

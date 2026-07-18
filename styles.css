@@ -1,8 +1,32 @@
 :root {
-    --bg-color: #000;
-    --text-color: #fff;
-    --accent-color: #00aaff;
-    --nav-bg: rgba(0, 0, 0, 0.8);
+    /* Neutral scale (softened neutrals) - light -> dark */
+    --neutral-0: #f6f5f3;
+    --neutral-1: #efeeec;
+    --neutral-2: #e6e4e1;
+    --neutral-3: #d7d3cf;
+    --neutral-4: #bfb9b4;
+    --neutral-5: #9d958f;
+    --neutral-6: #7b7370;
+    --neutral-7: #5d5551;
+    --neutral-8: #3f3835;
+    --neutral-9: #26221f;
+
+    /* Palette - 60/30/10 rule
+       - Primary neutral (60%): background
+       - Secondary neutral (30%): surfaces, cards, nav
+       - Accent (10%): buttons, links, highlights */
+    --bg-color: var(--neutral-0);
+    --surface-color: var(--neutral-2);
+    --text-color: var(--neutral-9);
+    --muted-text: var(--neutral-6);
+
+    /* Subtle accent (tested for sufficient contrast on light backgrounds) */
+    --accent-color: #0b7285;
+    --accent-foreground: #ffffff;
+
+    /* Slightly softened nav background using surface color */
+    --nav-bg: rgba(255, 255, 255, 0.9);
+
     --section-spacing: 2rem;
 }
 
@@ -25,6 +49,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 ul, ol {
@@ -43,12 +69,14 @@ section {
 }
 
 a {
-    color: var(--text-color);
+    color: var(--neutral-8);
     text-decoration: none;
 }
 
-a:hover {
+a:hover,
+a:focus {
     color: var(--accent-color);
+    outline: none;
 }
 
 .navbar {
@@ -62,9 +90,10 @@ a:hover {
     padding: 0.15rem 2rem;
     min-height: 7rem;
     background: var(--nav-bg);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid var(--neutral-2);
+    box-shadow: 0 6px 20px rgba(30, 30, 30, 0.06);
     z-index: 10;
+    color: var(--neutral-9);
 }
 
 .navbar .logo {
@@ -88,12 +117,36 @@ a:hover {
     gap: 1rem;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 
 .nav-links a {
     font-size: 1.25rem;
     padding: 0.5rem 0.75rem;
     transition: color 0.2s ease-in-out;
+}
+
+.language-switcher {
+    display: inline-flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.language-switcher button {
+    border: 1px solid var(--neutral-4);
+    background: var(--neutral-1);
+    color: var(--neutral-9);
+    padding: 0.35rem 0.65rem;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.language-switcher button.active,
+.language-switcher button:hover {
+    background: var(--accent-color);
+    color: var(--accent-foreground);
 }
 
 .page-shell {
@@ -140,7 +193,7 @@ a:hover {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: var(--text-color);
+    color: var(--neutral-0);
     background-image: url("./images/ur_background.png");
     background-size: cover;
     background-position: center;
@@ -152,7 +205,8 @@ a:hover {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.45);
+    /* use softened dark neutral overlay so headline remains readable */
+    background: linear-gradient(rgba(38,34,31,0.36), rgba(38,34,31,0.36));
     z-index: 0;
 }
 
@@ -186,11 +240,14 @@ a:hover {
 }
 
 .card-item img {
-    width: 25rem;
-    height: 18rem;
+    /* Constrain images to consistent visual size but preserve original aspect ratio */
+    max-width: 25rem;
+    max-height: 18rem;
+    width: auto;
+    height: auto;
     object-fit: contain;
     border-radius: 0.5rem;
-    background-color: #111;
+    background-color: var(--surface-color);
     padding: 0.25rem;
 }
 
@@ -209,6 +266,103 @@ a:hover {
 
 .card-link:hover {
     transform: translateY(-0.5rem);
+}
+
+/* CTA / button styles following 60-30-10: accent used sparingly */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+    border-radius: 0.5rem;
+    background: var(--accent-color);
+    color: var(--accent-foreground);
+    border: 1px solid color-mix(in srgb, var(--accent-color) 80%, black 20%);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background: color-mix(in srgb, var(--accent-color) 90%, black 10%);
+    box-shadow: 0 6px 20px rgba(11,114,133,0.12);
+    outline: none;
+}
+
+/* Media grid and cards for video/file placeholders */
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.media-card {
+    background: var(--surface-color);
+    border: 1px solid var(--neutral-3);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-start;
+}
+
+.media-card .media-preview {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--neutral-1);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.media-card video,
+.media-card img,
+.media-card iframe,
+.media-card video {
+    max-width: 100%;
+    max-height: 180px;
+    width: auto;
+    height: auto;
+    display: block;
+}
+
+.muted {
+    color: var(--muted-text);
+    margin: 0;
+}
+
+/* When muted text appears on the hero, use the same color as the hero heading */
+.hero .muted {
+    color: var(--neutral-0);
+}
+
+/* Assessment form */
+.assessment-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0.75rem;
+    align-items: start;
+    width: min(100%, 920px);
+    margin: 0 auto;
+}
+
+.assessment-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.topic-list {
+    list-style: disc;
+    padding-left: 1.25rem;
+    margin: 0.5rem auto 0;
+    max-width: 60ch;
+    text-align: left;
 }
 
 .service-card {
@@ -276,6 +430,21 @@ a:hover {
     padding: 0.75rem;
 }
 
+.contact-form input,
+.contact-form textarea {
+    background: var(--surface-color);
+    border: 1px solid var(--neutral-3);
+    color: var(--text-color);
+    border-radius: 0.375rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent-color) 10%, transparent 90%);
+    border-color: var(--accent-color);
+}
+
 .contact-form textarea {
     resize: vertical;
     min-height: 8rem;
@@ -292,16 +461,16 @@ a:hover {
 
 .form-status.success {
     display: block;
-    background: rgba(0, 170, 255, 0.15);
+    background: color-mix(in srgb, var(--accent-color) 10%, transparent 90%);
     border: 1px solid var(--accent-color);
-    color: #7fe3ff;
+    color: var(--accent-color);
 }
 
 .form-status.error {
     display: block;
-    background: rgba(255, 80, 80, 0.15);
-    border: 1px solid #ff5050;
-    color: #ffb0b0;
+    background: color-mix(in srgb, #ff4f4f 10%, transparent 90%);
+    border: 1px solid #ff4f4f;
+    color: #9b2b2b;
 }
 
 .site-footer {

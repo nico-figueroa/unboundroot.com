@@ -18,40 +18,43 @@
         <img src="./images/unboundroot_logo.png" alt="Unbound Root Logo">
       </div>
       <ul class="nav-links" id="nav-links">
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./about.html">About</a></li>
-        <li><a href="./services.html">Services</a></li>
-        <li><a href="./contact.html">Contact</a></li>
-      </ul>
-    </nav>
+          <li><a href="./index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="./about.html" data-i18n="nav.about">About</a></li>
+          <li><a href="./services.html" data-i18n="nav.services">Services</a></li>
+          <li><a href="./contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+        <div id="language-switcher" class="language-switcher" data-i18n-attr="aria-label" data-i18n="nav.languageSwitcher">
+          <button type="button" data-lang="en">EN</button>
+          <button type="button" data-lang="es">ES</button>
+        </div>
+      </nav>
 
     <main class="page-shell">
       <section class="page-section" id="contact-intro">
-        <h2>How do we connect?</h2>
-        <p>Once you have browsed our services, we'd love to hear from you!</p>
+        <p data-i18n="contact.intro">Once you have browsed our services, we'd love to hear from you!</p>
       </section>
 
       <section class="page-section" id="contact-details">
-        <h3>Here's where you can find us:</h3>
+        <h3 data-i18n="contact.where.title">Here's where you can find us:</h3>
         <div class="contact-details">
-          <p>Phone: +1 (916) 270-7964</p>
-          <p>Address: 6408 Seaglass Ave SE</p>
-          <p>Port Orchard, WA, 98367</p>
-          <a class="email-link" href="mailto:contact@unboundroot.com">Email Us: nitem18@hotmail.com</a>
+          <p data-i18n="contact.phone">Phone: +1 (916) 270-7964</p>
+          <p data-i18n="contact.address">Address: 6408 Seaglass Ave SE</p>
+          <p data-i18n="contact.city">Port Orchard, WA, 98367</p>
+          <a class="email-link" href="mailto:nitem18@hotmail.com" data-i18n="contact.email">Email Us: nitem18@hotmail.com</a>
         </div>
 
-        <h3>Or tell us about your needs:</h3>
+        <h3 data-i18n="contact.form.title">Or tell us about your needs:</h3>
         <form class="contact-form" action="https://formsubmit.co/808f6043738842ee576f3649aae5f049" method="POST">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" placeholder="Your Name" required>
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" placeholder="someone@example.com" required>
-          <label for="message">Message:</label>
-          <textarea id="message" rows="8" name="message" placeholder="Hello Unbound Root, I want to ask about the following services ..."></textarea>
+          <label for="name" data-i18n="contact.label.name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" data-i18n-placeholder="contact.label.name" required>
+          <label for="email" data-i18n="contact.label.email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="someone@example.com" data-i18n-placeholder="contact.label.email" required>
+          <label for="message" data-i18n="contact.label.message">Message:</label>
+          <textarea id="message" rows="8" name="message" placeholder="Hello Unbound Root, I want to ask about the following services ..." data-i18n-placeholder="contact.message.placeholder"></textarea>
           <input type="hidden" name="_subject" value="New message from Unbound Root website">
           <input type="hidden" name="_captcha" value="false">
           <div id="form-status" class="form-status" aria-live="polite"></div>
-          <input type="submit" value="Submit">
+          <input type="submit" value="Submit" data-i18n-value="contact.submit">
         </form>
       </section>
     </main>
@@ -76,6 +79,6 @@
       </div> -->
     </footer>
 
-    <script src="./main.js"></script>
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html>
