@@ -220,6 +220,13 @@ a:focus {
     margin: 0.25rem 0;
 }
 
+.hero p {
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    max-width: 60ch;
+    margin: 0 auto;
+    margin-top: 0.75rem;
+}
+
 .card-list {
     display: inline-flex;
     flex-wrap: wrap;
@@ -423,7 +430,8 @@ a:focus {
 }
 
 .contact-form input,
-.contact-form textarea {
+.contact-form textarea,
+.contact-form select {
     width: 100%;
     max-width: 32rem;
     text-align: center;
@@ -431,7 +439,8 @@ a:focus {
 }
 
 .contact-form input,
-.contact-form textarea {
+.contact-form textarea,
+.contact-form select {
     background: var(--surface-color);
     border: 1px solid var(--neutral-3);
     color: var(--text-color);
@@ -439,7 +448,8 @@ a:focus {
 }
 
 .contact-form input:focus,
-.contact-form textarea:focus {
+.contact-form textarea:focus,
+.contact-form select:focus {
     outline: none;
     box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent-color) 10%, transparent 90%);
     border-color: var(--accent-color);

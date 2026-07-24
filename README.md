@@ -18,6 +18,7 @@ The site's JavaScript has been split into small ES modules to improve separation
 - `js/main.js` — Application entry module. Imports and initializes feature modules on `DOMContentLoaded`.
 - `js/cards.js` — Encapsulates interactive behavior for service/topic cards (expanding details, toggles).
 - `js/forms.js` — Handles AJAX submission for forms with the class `contact-form` (used by the contact page and the assessment form on the services page).
+- `js/i18n.js` - Language switching (English and Spanish presently).
 
 Notes:
 - The modules use native ES modules and are supported in modern browsers. Pages that initialize the modules include `index.html`, `services.html`, `contact.html`, `creation_services.html`, and `education_services.html`.

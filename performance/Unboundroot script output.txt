@@ -1,0 +1,718 @@
+=== 1. DNS Resolution (curl.exe) ===
+* Added www.unboundroot.com:443:185.199.109.153 to DNS cache
+* Hostname www.unboundroot.com was found in DNS cache
+* Host www.unboundroot.com:443 was resolved.
+* IPv6: (none)
+* IPv4: 185.199.109.153
+*   Trying 185.199.109.153:443...
+* schannel: disabled automatic use of client certificate
+* ALPN: curl offers http/1.1
+* ALPN: server accepted http/1.1
+* Established connection to www.unboundroot.com (185.199.109.153 port 443) from 10.0.0.67 port 60713
+* using HTTP/1.x
+> GET / HTTP/1.1
+> Host: www.unboundroot.com
+> User-Agent: curl/8.21.0
+> Accept: */*
+>
+* Request completely sent off
+* schannel: remote party requests renegotiation
+* schannel: renegotiating SSL/TLS connection
+* schannel: SSL/TLS connection renegotiated
+< HTTP/1.1 301 Moved Permanently
+< Connection: keep-alive
+< Content-Length: 162
+< Server: GitHub.com
+< Content-Type: text/html
+< Location: https://unboundroot.com/
+< X-GitHub-Request-Id: 2C48:2E385B:806041:861807:6A5D472A
+< Accept-Ranges: bytes
+< Age: 0
+< Date: Sun, 19 Jul 2026 21:52:42 GMT
+< Via: 1.1 varnish
+< X-Served-By: cache-bfi-krnt7300078-BFI
+< X-Cache: MISS
+< X-Cache-Hits: 0
+< X-Timer: S1784497963.674989,VS0,VE91
+< Vary: Accept-Encoding
+< X-Fastly-Request-ID: 3fa8d363164e973d14de3450f2aea25a5d9f4252
+<
+<html>
+<head><title>301 Moved Permanently</title></head>
+<body>
+<center><h1>301 Moved Permanently</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+* Connection #0 to host www.unboundroot.com:443 left intact
+
+=== 2. Follow Redirects (curl.exe -L) ===
+*   Trying 185.199.108.153:443...
+* Host www.unboundroot.com:443 was resolved.
+* IPv6: 2606:50c0:8003::153, 2606:50c0:8000::153, 2606:50c0:8001::153, 2606:50c0:8002::153
+* IPv4: 185.199.108.153, 185.199.110.153, 185.199.109.153, 185.199.111.153
+* schannel: disabled automatic use of client certificate
+* ALPN: curl offers http/1.1
+* ALPN: server accepted http/1.1
+* Established connection to www.unboundroot.com (185.199.108.153 port 443) from 10.0.0.67 port 60714
+* using HTTP/1.x
+> GET / HTTP/1.1
+> Host: www.unboundroot.com
+> User-Agent: curl/8.21.0
+> Accept: */*
+>
+* Request completely sent off
+* schannel: remote party requests renegotiation
+* schannel: renegotiating SSL/TLS connection
+* schannel: SSL/TLS connection renegotiated
+< HTTP/1.1 301 Moved Permanently
+< Connection: keep-alive
+< Content-Length: 162
+< Server: GitHub.com
+< Content-Type: text/html
+< Location: https://unboundroot.com/
+< X-GitHub-Request-Id: 2C48:2E385B:806041:861807:6A5D472A
+< Accept-Ranges: bytes
+< Date: Sun, 19 Jul 2026 21:52:43 GMT
+< Via: 1.1 varnish
+< Age: 0
+< X-Served-By: cache-bfi-krnt7300033-BFI
+< X-Cache: HIT
+< X-Cache-Hits: 1
+< X-Timer: S1784497963.176068,VS0,VE3
+< Vary: Accept-Encoding
+< X-Fastly-Request-ID: e723db8dcae4fb55d69d02a42b6e0eed9b24d79e
+* Ignoring the response-body
+* setting size while ignoring
+<
+* Connection #0 to host www.unboundroot.com:443 left intact
+* Issue another request to this URL: 'https://unboundroot.com/'
+* Host unboundroot.com:443 was resolved.
+* IPv6: 2606:50c0:8000::153, 2606:50c0:8002::153, 2606:50c0:8001::153, 2606:50c0:8003::153
+* IPv4: 185.199.108.153, 185.199.111.153, 185.199.110.153, 185.199.109.153
+*   Trying [2606:50c0:8000::153]:443...
+* schannel: disabled automatic use of client certificate
+* ALPN: curl offers http/1.1
+* ALPN: server accepted http/1.1
+* Established connection to unboundroot.com (2606:50c0:8000::153 port 443) from 2601:600:c480:a90:bc83:f0df:ac13:c732 port 60715
+* using HTTP/1.x
+> GET / HTTP/1.1
+> Host: unboundroot.com
+> User-Agent: curl/8.21.0
+> Accept: */*
+>
+* Request completely sent off
+* schannel: remote party requests renegotiation
+* schannel: renegotiating SSL/TLS connection
+* schannel: SSL/TLS connection renegotiated
+< HTTP/1.1 200 OK
+< Connection: keep-alive
+< Content-Length: 4745
+< Server: GitHub.com
+< Content-Type: text/html; charset=utf-8
+< Last-Modified: Sat, 18 Jul 2026 08:56:52 GMT
+< Access-Control-Allow-Origin: *
+< Strict-Transport-Security: max-age=31556952
+< ETag: "6a5b3fd4-1289"
+< expires: Sun, 19 Jul 2026 21:41:32 GMT
+< Cache-Control: max-age=600
+< x-proxy-cache: MISS
+< X-GitHub-Request-Id: FE18:1C213A:7CF7B4:829B1E:6A5D4233
+< Accept-Ranges: bytes
+< Age: 0
+< Date: Sun, 19 Jul 2026 21:52:43 GMT
+< Via: 1.1 varnish
+< X-Served-By: cache-bfi-krnt7300045-BFI
+< X-Cache: HIT
+< X-Cache-Hits: 0
+< X-Timer: S1784497964.501462,VS0,VE91
+< Vary: Accept-Encoding
+< X-Fastly-Request-ID: c1a3053092723a8edcddca0a992902e7276fa31e
+<
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; frame-src 'none'; frame-ancestors 'none';">
+    <meta http-equiv="Strict-Transport-Security" content="max-age=63072000; includeSubDomains; preload">
+    <meta name="description" content="Unbound Root provides family-focused cybersecurity education: short video lessons, downloadable guides, and personalized assessments to help parents protect children online.">
+    <link rel="shortcut icon" href="./images/ur_logo_favicon.png" type="image/x-icon">
+    <link href="styles.css" rel="stylesheet">
+    <title>Unbound Root</title>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="./images/unboundroot_logo.png" alt="Unbound Root Logo">
+      </div>
+      <ul class="nav-links" id="nav-links">
+          <li><a href="./index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="./about.html" data-i18n="nav.about">About</a></li>
+          <li><a href="./services.html" data-i18n="nav.services">Services</a></li>
+          <li><a href="./contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+        <div id="language-switcher" class="language-switcher" data-i18n-attr="aria-label" data-i18n="nav.languageSwitcher">
+          <button type="button" data-lang="en">EN</button>
+          <button type="button" data-lang="es">ES</button>
+        </div>
+      </nav>
+
+    <main class="page-shell">
+      <section class="hero page-section" id="hero">
+        <h1 data-i18n="hero.title">Family Cybersecurity Education</h1>
+        <p class="muted" data-i18n="hero.subtitle">Short lessons, downloadable guides, and tailored assessments to keep your family safer online.</p>
+        <p style="margin-top:0.75rem;"><a class="btn-primary" href="./services.html#assessment" data-i18n="hero.cta">Request a personalized assessment</a></p>
+      </section>
+      <section class="page-section" id="about">
+        <h2 data-i18n="about.title">Our vision</h2>
+        <p data-i18n="about.text">We help families navigate the digital world with confidence. Our mission is to provide practical, research-backed education and resources so parents can protect and empower their children online.</p>
+      </section>
+
+      <section class="page-section" id="services">
+        <h2 data-i18n="services.intro.title">Keep your family safe online</h2>
+        <h3 data-i18n="services.intro.text">Start here</h3>
+        <ul class="card-list" role="list">
+          <li class="card-item">
+            <a href="./services.html#offerings" class="card-link">
+              <img src="./images/creation.jpg" alt="Featured lesson thumbnail">
+              <span data-i18n="services.lesson.title">Featured lesson: Parental Controls</span>
+            </a>
+          </li>
+          <li class="card-item">
+            <a href="./services.html#assessment" class="card-link">
+              <img src="./images/plan.jpg" alt="Assessment placeholder">
+              <span data-i18n="services.assessment.submit">Request a personalized assessment</span>
+            </a>
+          </li>
+          <li class="card-item">
+            <a href="./services.html#topics" class="card-link">
+              <img src="./images/education.jpg" alt="Topics covered">
+              <span data-i18n="services.topics.title">Topics we cover</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Unbound Root. All rights reserved.</p>
+      <p>Designed and built with ❤️ by the Unbound Root team.</p>
+      <p>Follow us on social media!</p>
+      <!--
+      <div class="social-media">
+        <a href="https://www.facebook.com/unboundroot" target="_blank" rel="noopener noreferrer">
+          <img src="./images/facebook_icon.png" alt="Facebook Icon">
+        </a>
+        <a href="https://www.twitter.com/unboundroot" target="_blank" rel="noopener noreferrer">
+          <img src="./images/twitter_icon.png" alt="Twitter Icon">
+        </a>
+        <a href="https://www.instagram.com/unboundroot" target="_blank" rel="noopener noreferrer">
+          <img src="./images/instagram_icon.png" alt="Instagram Icon">
+        </a>
+        <a href="https://www.linkedin.com/company/unboundroot" target="_blank" rel="noopener noreferrer">
+          <img src="./images/linkedin_icon.png" alt="LinkedIn Icon">
+        </a> -->
+      </div>
+    </footer>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
+* Connection #1 to host unboundroot.com:443 left intact
+
+=== 3. HEAD Request (curl.exe) ===
+HTTP/1.1 301 Moved Permanently
+Connection: keep-alive
+Content-Length: 162
+Server: GitHub.com
+Content-Type: text/html
+Location: https://unboundroot.com/
+X-GitHub-Request-Id: 2C48:2E385B:806041:861807:6A5D472A
+Accept-Ranges: bytes
+Date: Sun, 19 Jul 2026 21:52:44 GMT
+Via: 1.1 varnish
+Age: 1
+X-Served-By: cache-bfi-krnt7300076-BFI
+X-Cache: HIT
+X-Cache-Hits: 1
+X-Timer: S1784497964.046450,VS0,VE3
+Vary: Accept-Encoding
+X-Fastly-Request-ID: d7a1e7715cef5c4cd20253555c6faa700a100c8b
+
+
+=== 4. HEAD Request (Invoke-WebRequest) ===
+
+Security Warning: Script Execution Risk
+Invoke-WebRequest parses the content of the web page. Script code in the web page might be run when the page is
+parsed.
+      RECOMMENDED ACTION:
+      Use the -UseBasicParsing switch to avoid script code execution.
+
+      Do you want to continue?
+
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"): A
+
+
+=== 5. GET Request (curl.exe) ===
+* Host www.unboundroot.com:443 was resolved.
+* IPv6: 2606:50c0:8003::153, 2606:50c0:8000::153, 2606:50c0:8001::153, 2606:50c0:8002::153
+* IPv4: 185.199.108.153, 185.199.110.153, 185.199.109.153, 185.199.111.153
+*   Trying [2606:50c0:8003::153]:443...
+* schannel: disabled automatic use of client certificate
+* ALPN: curl offers http/1.1
+* ALPN: server accepted http/1.1
+* Established connection to www.unboundroot.com (2606:50c0:8003::153 port 443) from 2601:600:c480:a90:bc83:f0df:ac13:c732 port 60719
+* using HTTP/1.x
+> GET / HTTP/1.1
+> Host: www.unboundroot.com
+> User-Agent: curl/8.21.0
+> Accept: */*
+>
+* Request completely sent off
+* schannel: remote party requests renegotiation
+* schannel: renegotiating SSL/TLS connection
+* schannel: SSL/TLS connection renegotiated
+< HTTP/1.1 301 Moved Permanently
+< Connection: keep-alive
+< Content-Length: 162
+< Server: GitHub.com
+< Content-Type: text/html
+< Location: https://unboundroot.com/
+< X-GitHub-Request-Id: 2C48:2E385B:806041:861807:6A5D472A
+< Accept-Ranges: bytes
+< Date: Sun, 19 Jul 2026 21:52:48 GMT
+< Via: 1.1 varnish
+< Age: 6
+< X-Served-By: cache-bfi-krnt7300075-BFI
+< X-Cache: HIT
+< X-Cache-Hits: 1
+< X-Timer: S1784497969.881081,VS0,VE2
+< Vary: Accept-Encoding
+< X-Fastly-Request-ID: 830e5aaff7d224fbbf10d82e86aa49a546fa18b6
+<
+<html>
+<head><title>301 Moved Permanently</title></head>
+<body>
+<center><h1>301 Moved Permanently</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+* Connection #0 to host www.unboundroot.com:443 left intact
+
+=== 6. GET Request (Invoke-WebRequest) ===
+Key                         Value
+---                         -----
+Connection                  keep-alive
+Access-Control-Allow-Origin *
+Strict-Transport-Security   max-age=31556952
+x-proxy-cache               MISS
+X-GitHub-Request-Id         FE18:1C213A:7CF7B4:829B1E:6A5D4233
+Age                         1
+X-Served-By                 cache-bfi-krnt7300054-BFI
+X-Cache                     HIT
+X-Cache-Hits                1
+X-Timer                     S1784497965.645013,VS0,VE5
+Vary                        Accept-Encoding
+X-Fastly-Request-ID         b38b6f5fbe180e877db37b2bc7d83b38961fc241
+Accept-Ranges               bytes
+Content-Length              4745
+Cache-Control               max-age=600
+Content-Type                text/html; charset=utf-8
+Date                        Sun, 19 Jul 2026 21:52:44 GMT
+Expires                     Sun, 19 Jul 2026 21:41:32 GMT
+ETag                        "6a5b3fd4-1289"
+Last-Modified               Sat, 18 Jul 2026 08:56:52 GMT
+Server                      GitHub.com
+Via                         1.1 varnish
+200
+Connection                  keep-alive
+Access-Control-Allow-Origin *
+Strict-Transport-Security   max-age=31556952
+x-proxy-cache               MISS
+X-GitHub-Request-Id         FE18:1C213A:7CF7B4:829B1E:6A5D4233
+Age                         5
+X-Served-By                 cache-bfi-krnt7300054-BFI
+X-Cache                     HIT
+X-Cache-Hits                2
+X-Timer                     S1784497969.969041,VS0,VE1
+Vary                        Accept-Encoding
+X-Fastly-Request-ID         7c962e840e06c204d5b10e4085219c1b4e7a36e8
+Accept-Ranges               bytes
+Content-Length              4745
+Cache-Control               max-age=600
+Content-Type                text/html; charset=utf-8
+Date                        Sun, 19 Jul 2026 21:52:48 GMT
+Expires                     Sun, 19 Jul 2026 21:41:32 GMT
+ETag                        "6a5b3fd4-1289"
+Last-Modified               Sat, 18 Jul 2026 08:56:52 GMT
+Server                      GitHub.com
+Via                         1.1 varnish
+
+=== 7. Browser-like Headers (curl.exe) ===
+* Host www.unboundroot.com:443 was resolved.
+* IPv6: 2606:50c0:8003::153, 2606:50c0:8000::153, 2606:50c0:8001::153, 2606:50c0:8002::153
+* IPv4: 185.199.108.153, 185.199.110.153, 185.199.109.153, 185.199.111.153
+*   Trying [2606:50c0:8003::153]:443...
+* schannel: disabled automatic use of client certificate
+* ALPN: curl offers http/1.1
+* ALPN: server accepted http/1.1
+* Established connection to www.unboundroot.com (2606:50c0:8003::153 port 443) from 2601:600:c480:a90:bc83:f0df:ac13:c732 port 60720
+* using HTTP/1.x
+> GET / HTTP/1.1
+> Host: www.unboundroot.com
+> User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36
+> Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+> Accept-Language: en-US,en;q=0.9
+> Accept-Encoding: gzip, deflate, br
+>
+* Request completely sent off
+* schannel: remote party requests renegotiation
+* schannel: renegotiating SSL/TLS connection
+* schannel: SSL/TLS connection renegotiated
+< HTTP/1.1 301 Moved Permanently
+< Connection: keep-alive
+< Content-Length: 162
+< Server: GitHub.com
+< Content-Type: text/html
+< Location: https://unboundroot.com/
+< X-GitHub-Request-Id: 863A:1F71FC:73951:A36B9:6A5D443B
+< Accept-Ranges: bytes
+< Age: 758
+< Date: Sun, 19 Jul 2026 21:52:49 GMT
+< Via: 1.1 varnish
+< X-Served-By: cache-bfi-krnt7300101-BFI
+< X-Cache: HIT
+< X-Cache-Hits: 0
+< X-Timer: S1784497969.187843,VS0,VE3
+< Vary: Accept-Encoding
+< X-Fastly-Request-ID: 891e2551d7051d3ab03d2eda73f8bcb806aa49ef
+<
+<html>
+<head><title>301 Moved Permanently</title></head>
+<body>
+<center><h1>301 Moved Permanently</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+* Connection #0 to host www.unboundroot.com:443 left intact
+
+=== 8. Compression Negotiation ===
+HTTP/1.1 301 Moved Permanently
+Connection: keep-alive
+Content-Length: 162
+Server: GitHub.com
+Content-Type: text/html
+Location: https://unboundroot.com/
+X-GitHub-Request-Id: 863A:1F71FC:73951:A36B9:6A5D443B
+Accept-Ranges: bytes
+Date: Sun, 19 Jul 2026 21:52:49 GMT
+Via: 1.1 varnish
+Age: 758
+X-Served-By: cache-bfi-krnt7300027-BFI
+X-Cache: HIT
+X-Cache-Hits: 1
+X-Timer: S1784497969.348934,VS0,VE2
+Vary: Accept-Encoding
+X-Fastly-Request-ID: f108b7c1c3d0482d84f60d5085ab3427e90c3435
+
+HTTP/1.1 301 Moved Permanently
+Connection: keep-alive
+Content-Length: 162
+Server: GitHub.com
+Content-Type: text/html
+Location: https://unboundroot.com/
+X-GitHub-Request-Id: 2C48:2E385B:806041:861807:6A5D472A
+Accept-Ranges: bytes
+Date: Sun, 19 Jul 2026 21:52:49 GMT
+Via: 1.1 varnish
+Age: 7
+X-Served-By: cache-bfi-krnt7300027-BFI
+X-Cache: HIT
+X-Cache-Hits: 1
+X-Timer: S1784497969.482329,VS0,VE3
+Vary: Accept-Encoding
+X-Fastly-Request-ID: d8d76ae0c114d9fdd231e06ee23ca9fffc4ef96a
+
+
+=== 9. Content Negotiation ===
+* Host www.unboundroot.com:443 was resolved.
+* IPv6: 2606:50c0:8003::153, 2606:50c0:8000::153, 2606:50c0:8001::153, 2606:50c0:8002::153
+* IPv4: 185.199.108.153, 185.199.110.153, 185.199.109.153, 185.199.111.153
+*   Trying [2606:50c0:8003::153]:443...
+*   Trying 185.199.108.153:443...
+* schannel: disabled automatic use of client certificate
+* ALPN: curl offers http/1.1
+* ALPN: server accepted http/1.1
+* Established connection to www.unboundroot.com (2606:50c0:8003::153 port 443) from 2601:600:c480:a90:bc83:f0df:ac13:c732 port 52209
+* using HTTP/1.x
+> GET / HTTP/1.1
+> Host: www.unboundroot.com
+> User-Agent: curl/8.21.0
+> Accept: application/json
+>
+* Request completely sent off
+* schannel: remote party requests renegotiation
+* schannel: renegotiating SSL/TLS connection
+* schannel: SSL/TLS connection renegotiated
+< HTTP/1.1 301 Moved Permanently
+< Connection: keep-alive
+< Content-Length: 162
+< Server: GitHub.com
+< Content-Type: text/html
+< Location: https://unboundroot.com/
+< X-GitHub-Request-Id: 2C48:2E385B:806041:861807:6A5D472A
+< Accept-Ranges: bytes
+< Date: Sun, 19 Jul 2026 21:52:49 GMT
+< Via: 1.1 varnish
+< Age: 7
+< X-Served-By: cache-bfi-krnt7300114-BFI
+< X-Cache: HIT
+< X-Cache-Hits: 1
+< X-Timer: S1784497970.844779,VS0,VE2
+< Vary: Accept-Encoding
+< X-Fastly-Request-ID: deb3e4202e763f152041901fb329ab50f76d9dca
+<
+<html>
+<head><title>301 Moved Permanently</title></head>
+<body>
+<center><h1>301 Moved Permanently</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+* Connection #0 to host www.unboundroot.com:443 left intact
+* Host www.unboundroot.com:443 was resolved.
+* IPv6: 2606:50c0:8003::153, 2606:50c0:8000::153, 2606:50c0:8001::153, 2606:50c0:8002::153
+* IPv4: 185.199.108.153, 185.199.110.153, 185.199.109.153, 185.199.111.153
+*   Trying [2606:50c0:8003::153]:443...
+* schannel: disabled automatic use of client certificate
+* ALPN: curl offers http/1.1
+* ALPN: server accepted http/1.1
+* Established connection to www.unboundroot.com (2606:50c0:8003::153 port 443) from 2601:600:c480:a90:bc83:f0df:ac13:c732 port 52211
+* using HTTP/1.x
+> GET / HTTP/1.1
+> Host: www.unboundroot.com
+> User-Agent: curl/8.21.0
+> Accept: text/plain
+>
+* Request completely sent off
+* schannel: remote party requests renegotiation
+* schannel: renegotiating SSL/TLS connection
+* schannel: SSL/TLS connection renegotiated
+< HTTP/1.1 301 Moved Permanently
+< Connection: keep-alive
+< Content-Length: 162
+< Server: GitHub.com
+< Content-Type: text/html
+< Location: https://unboundroot.com/
+< X-GitHub-Request-Id: 2C48:2E385B:806041:861807:6A5D472A
+< Accept-Ranges: bytes
+< Date: Sun, 19 Jul 2026 21:52:49 GMT
+< Via: 1.1 varnish
+< Age: 7
+< X-Served-By: cache-bfi-krnt7300069-BFI
+< X-Cache: HIT
+< X-Cache-Hits: 1
+< X-Timer: S1784497970.997457,VS0,VE2
+< Vary: Accept-Encoding
+< X-Fastly-Request-ID: a44fec0ebcecbc0bba175238f862c27b31f3f94b
+<
+<html>
+<head><title>301 Moved Permanently</title></head>
+<body>
+<center><h1>301 Moved Permanently</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+* Connection #0 to host www.unboundroot.com:443 left intact
+* Host www.unboundroot.com:443 was resolved.
+* IPv6: 2606:50c0:8003::153, 2606:50c0:8000::153, 2606:50c0:8001::153, 2606:50c0:8002::153
+* IPv4: 185.199.108.153, 185.199.110.153, 185.199.109.153, 185.199.111.153
+*   Trying [2606:50c0:8003::153]:443...
+* schannel: disabled automatic use of client certificate
+* ALPN: curl offers http/1.1
+* ALPN: server accepted http/1.1
+* Established connection to www.unboundroot.com (2606:50c0:8003::153 port 443) from 2601:600:c480:a90:bc83:f0df:ac13:c732 port 52212
+* using HTTP/1.x
+> GET / HTTP/1.1
+> Host: www.unboundroot.com
+> User-Agent: curl/8.21.0
+> Accept: */*
+>
+* Request completely sent off
+* schannel: remote party requests renegotiation
+* schannel: renegotiating SSL/TLS connection
+* schannel: SSL/TLS connection renegotiated
+< HTTP/1.1 301 Moved Permanently
+< Connection: keep-alive
+< Content-Length: 162
+< Server: GitHub.com
+< Content-Type: text/html
+< Location: https://unboundroot.com/
+< X-GitHub-Request-Id: 2C48:2E385B:806041:861807:6A5D472A
+< Accept-Ranges: bytes
+< Date: Sun, 19 Jul 2026 21:52:50 GMT
+< Via: 1.1 varnish
+< Age: 7
+< X-Served-By: cache-bfi-krnt7300035-BFI
+< X-Cache: HIT
+< X-Cache-Hits: 1
+< X-Timer: S1784497970.165152,VS0,VE2
+< Vary: Accept-Encoding
+< X-Fastly-Request-ID: ef36215fd7ab67829ae67c71d0ad475e54f9fb18
+<
+<html>
+<head><title>301 Moved Permanently</title></head>
+<body>
+<center><h1>301 Moved Permanently</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+* Connection #0 to host www.unboundroot.com:443 left intact
+
+=== 10. OPTIONS Request (curl.exe) ===
+* Host www.unboundroot.com:443 was resolved.
+* IPv6: 2606:50c0:8003::153, 2606:50c0:8000::153, 2606:50c0:8001::153, 2606:50c0:8002::153
+* IPv4: 185.199.108.153, 185.199.110.153, 185.199.109.153, 185.199.111.153
+*   Trying [2606:50c0:8003::153]:443...
+* schannel: disabled automatic use of client certificate
+* ALPN: curl offers http/1.1
+* ALPN: server accepted http/1.1
+* Established connection to www.unboundroot.com (2606:50c0:8003::153 port 443) from 2601:600:c480:a90:bc83:f0df:ac13:c732 port 52213
+* using HTTP/1.x
+> OPTIONS / HTTP/1.1
+> Host: www.unboundroot.com
+> User-Agent: curl/8.21.0
+> Accept: */*
+>
+* Request completely sent off
+* schannel: remote party requests renegotiation
+* schannel: renegotiating SSL/TLS connection
+* schannel: SSL/TLS connection renegotiated
+* schannel: server close notification received (close_notify)
+< HTTP/1.1 405 Method Not Allowed
+< Connection: close
+< Content-Length: 131
+< Server: Varnish
+< Retry-After: 0
+< Accept-Ranges: bytes
+< Date: Sun, 19 Jul 2026 21:52:50 GMT
+< Via: 1.1 varnish
+< X-Served-By: cache-bfi-krnt7300098-BFI
+< X-Cache: MISS
+< X-Cache-Hits: 0
+< X-Timer: S1784497970.327473,VS0,VE0
+< X-Fastly-Request-ID: a923798b61bd9354ad4f127eb08b180b4d55ffc2
+<
+<html>
+<head><title>405 Not Allowed</title></head>
+<body bgcolor="white">
+<center><h1>405 Not Allowed</h1></center>
+</body>
+</html>* shutting down connection #0
+
+=== 11. OPTIONS Request (Invoke-WebRequest) ===
+OPTIONS not allowed (405).
+
+=== 12. Fetch Static Assets (HEAD) ===
+
+--- https://www.unboundroot.com/styles.css ---
+HTTP/1.1 301 Moved Permanently
+Connection: keep-alive
+Content-Length: 162
+Server: GitHub.com
+Content-Type: text/html
+Location: https://unboundroot.com/styles.css
+X-GitHub-Request-Id: DF70:71F8E:7E27AC:83D457:6A5D4466
+Accept-Ranges: bytes
+Age: 715
+Date: Sun, 19 Jul 2026 21:52:50 GMT
+Via: 1.1 varnish
+X-Served-By: cache-bfi-krnt7300102-BFI
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1784497971.513556,VS0,VE2
+Vary: Accept-Encoding
+X-Fastly-Request-ID: c198489f7ef392f5c0323e0719f89c4ece08c179
+
+
+--- https://www.unboundroot.com/script.js ---
+HTTP/1.1 301 Moved Permanently
+Connection: keep-alive
+Content-Length: 162
+Server: GitHub.com
+Content-Type: text/html
+Location: https://unboundroot.com/script.js
+X-GitHub-Request-Id: F174:71F8E:7E27C9:83D470:6A5D4467
+Accept-Ranges: bytes
+Age: 715
+Date: Sun, 19 Jul 2026 21:52:50 GMT
+Via: 1.1 varnish
+X-Served-By: cache-bfi-krnt7300043-BFI
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1784497971.673183,VS0,VE2
+Vary: Accept-Encoding
+X-Fastly-Request-ID: 50133d5454bfc5e94e0ceb6e856848b3a1bf0693
+
+
+--- https://www.unboundroot.com/logo.png ---
+HTTP/1.1 301 Moved Permanently
+Connection: keep-alive
+Content-Length: 162
+Server: GitHub.com
+Content-Type: text/html
+Location: https://unboundroot.com/logo.png
+X-GitHub-Request-Id: 52F8:FCEC2:73B6E:A396B:6A5D4467
+Accept-Ranges: bytes
+Age: 715
+Date: Sun, 19 Jul 2026 21:52:50 GMT
+Via: 1.1 varnish
+X-Served-By: cache-bfi-krnt7300066-BFI
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1784497971.922867,VS0,VE2
+Vary: Accept-Encoding
+X-Fastly-Request-ID: 8d0fe2bd3d3647bd72d0158c53666e7ddcceee0d
+
+
+--- https://www.unboundroot.com/favicon.ico ---
+HTTP/1.1 301 Moved Permanently
+Connection: keep-alive
+Content-Length: 162
+Server: GitHub.com
+Content-Type: text/html
+Location: https://unboundroot.com/favicon.ico
+X-GitHub-Request-Id: 734A:150EEF:7CA061:825705:6A5D4731
+Accept-Ranges: bytes
+Age: 0
+Date: Sun, 19 Jul 2026 21:52:51 GMT
+Via: 1.1 varnish
+X-Served-By: cache-bfi-krnt7300067-BFI
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1784497971.129384,VS0,VE80
+Vary: Accept-Encoding
+X-Fastly-Request-ID: 7afacdb555f0460149077d9ba0d77cf614585415
+
+
+=== 13. HTML Parsing (Invoke-WebRequest) ===
+
+--- Page Title ---
+Unbound Root
+
+--- Links Found ---
+
+
+
+
+
+
+
+
+
+--- Forms Found ---
+
+=== Browser Simulation Complete ===

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; frame-src 'none'; frame-ancestors 'none';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://formsubmit.co; form-action 'self' https://formsubmit.co; script-src 'self'; object-src 'none'; base-uri 'self'; frame-src 'none'; frame-ancestors 'none';">
     <meta http-equiv="Strict-Transport-Security" content="max-age=63072000; includeSubDomains; preload">
     <meta name="description" content="Contact Unbound Root to discuss creative development, educational collaboration, or custom process improvement services in Washington state and beyond.">
     <link rel="shortcut icon" href="./images/ur_logo_favicon.png" type="image/x-icon">
@@ -51,8 +51,9 @@
           <input type="email" id="email" name="email" placeholder="someone@example.com" data-i18n-placeholder="contact.label.email" required>
           <label for="message" data-i18n="contact.label.message">Message:</label>
           <textarea id="message" rows="8" name="message" placeholder="Hello Unbound Root, I want to ask about the following services ..." data-i18n-placeholder="contact.message.placeholder"></textarea>
-          <input type="hidden" name="_subject" value="New message from Unbound Root website">
+          <input type="hidden" name="_subject" value="New contact message from Unbound Root website">
           <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="./contact.html?submitted=1&form=contact">
           <div id="form-status" class="form-status" aria-live="polite"></div>
           <input type="submit" value="Submit" data-i18n-value="contact.submit">
         </form>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; frame-src 'none'; frame-ancestors 'none';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://formsubmit.co; form-action 'self' https://formsubmit.co; script-src 'self'; object-src 'none'; base-uri 'self'; frame-src 'none'; frame-ancestors 'none';">
     <meta http-equiv="Strict-Transport-Security" content="max-age=63072000; includeSubDomains; preload">
     <meta name="description" content="Cybersecurity education for families: videos, downloadable resources, and personalized assessments to help parents protect children online.">
     <link rel="shortcut icon" href="./images/ur_logo_favicon.png" type="image/x-icon">
@@ -62,19 +62,16 @@
 
       <section class="page-section" id="assessment">
         <h2 data-i18n="services.assessment.title">Personalized Assessment & Recommendations</h2>
-        <p data-i18n="services.assessment.text">Get a tailored plan for your family's needs. Fill the short assessment and we'll provide recommended learning paths and resources.</p>
+        <p data-i18n="services.assessment.text">Get a tailored plan for your needs. Fill the short assessment and we'll provide recommended learning paths and resources.</p>
 
-        <form class="contact-form assessment-form" action="https://formsubmit.co/808f6043738842ee576f3649aae5f049" method="post" aria-label="Family cybersecurity assessment">
-          <label data-i18n="services.assessment.parent_name">Parent name</label>
+        <form class="contact-form" action="https://formsubmit.co/808f6043738842ee576f3649aae5f049" method="POST" aria-label="Family cybersecurity assessment">
+          <label data-i18n="services.assessment.parent_name">Your name</label>
           <input type="text" name="parent_name" placeholder="Your name" data-i18n-placeholder="services.assessment.parent_name">
 
           <label data-i18n="services.assessment.email">Email</label>
           <input type="email" name="email" placeholder="you@example.com" data-i18n-placeholder="services.assessment.email">
 
-          <label data-i18n="services.assessment.children_ages">Children (ages)</label>
-          <input type="text" name="children_ages" placeholder="e.g. 3, 7, 12" data-i18n-placeholder="services.assessment.children_ages">
-
-          <label data-i18n="services.assessment.concern">Areas of concern</label>
+          <label data-i18n="services.assessment.concern">Areas of interest or concern</label>
           <select name="concern" aria-label="primary concern">
             <option value="ParentalControls" data-i18n="services.assessment.concern.ParentalControls">Parental Controls</option>
             <option value="PhishingProtection" data-i18n="services.assessment.concern.PhishingProtection">Phishing Protection</option>
@@ -88,11 +85,11 @@
           <label data-i18n="services.assessment.details">Additional details</label>
           <textarea name="details" placeholder="Tell us briefly about your situation" data-i18n-placeholder="services.assessment.details.placeholder"></textarea>
 
-          <input type="hidden" name="_subject" value="Personalized assessment request">
+          <input type="hidden" name="_subject" value="New assessment request from Unbound Root Website">
           <input type="hidden" name="_captcha" value="false">
-          <div class="form-status" aria-live="polite"></div>
-          <button type="submit" class="btn-primary" data-i18n="services.assessment.submit">Request assessment</button>
-          <p class="muted" data-i18n="services.assessment.note">Note: form is a placeholder. Submissions will be routed to our assessment workflow when enabled.</p>
+          <input type="hidden" name="_next" value="./services.html?submitted=1&form=assessment">
+          <div id="form-status" class="form-status" aria-live="polite"></div>
+          <button type="submit" value="Submit" class="btn-primary" data-i18n="services.assessment.submit">Request assessment</button>
         </form>
       </section>
 
@@ -101,43 +98,43 @@
         <p data-i18n="services.topics.description">Below are the core topics we teach — each will have a short lesson video and supporting files.</p>
 
         <ul class="card-list" role="list">
-          <li class="card-item">
+          <li class="card-item service-card" data-title="Parental Controls" data-description="How to set up your devices to share age appropriate content and prevent uses based on age." data-price="Per Assessment" data-conditions="For all ages.">
             <a href="#" class="card-link">
               <img src="./images/process_improvement.avif" alt="Parental Controls">
               <span>Parental Controls</span>
             </a>
           </li>
-          <li class="card-item">
+          <li class="card-item service-card" data-title="Phishing protection" data-description="How to identify and avoid phishing attempts and other online scams." data-price="Per Assessment" data-conditions="For all ages.">
             <a href="#" class="card-link">
               <img src="./images/code.avif" alt="Phishing protection">
               <span>Phishing protection</span>
             </a>
           </li>
-          <li class="card-item">
+          <li class="card-item service-card" data-title="Online predator prevention" data-description="How to set up your devices to share age appropriate content and prevent uses based on age." data-price="Per Assessment" data-conditions="For all ages.">
             <a href="#" class="card-link">
-              <img src="./images/mentorship.avif" alt="Online predators">
-              <span>Online predators' identification and protection</span>
+              <img src="./images/mentorship.avif" alt="Online predator prevention">
+              <span>Online predator prevention</span>
             </a>
           </li>
-          <li class="card-item">
+          <li class="card-item service-card" data-title="Digital product usage hygiene" data-description="How to set up your devices to share age appropriate content and prevent uses based on age." data-price="Per Assessment" data-conditions="For all ages.">
             <a href="#" class="card-link">
               <img src="./images/plan.jpg" alt="Digital hygiene">
               <span>Digital product usage hygiene</span>
             </a>
           </li>
-          <li class="card-item">
+          <li class="card-item service-card" data-title="Effects of digital use in family dynamics" data-description="How to set up your devices to share age appropriate content and prevent uses based on age." data-price="Per Assessment" data-conditions="For all ages.">
             <a href="#" class="card-link">
               <img src="./images/sleep_baby.avif" alt="Family dynamics">
               <span>Effects of digital use in family dynamics</span>
             </a>
           </li>
-          <li class="card-item">
+          <li class="card-item service-card" data-title="Computer literacy for parents and children" data-description="How to set up your devices to share age appropriate content and prevent uses based on age." data-price="Per Assessment" data-conditions="For all ages.">
             <a href="#" class="card-link">
               <img src="./images/computer_literacy.avif" alt="Computer literacy">
               <span>Computer literacy for parents and children</span>
             </a>
           </li>
-          <li class="card-item">
+          <li class="card-item service-card" data-title="Malware protection techniques" data-description="How to set up your devices to share age appropriate content and prevent uses based on age." data-price="Per Assessment" data-conditions="For all ages.">
             <a href="#" class="card-link">
               <img src="./images/coding.avif" alt="Malware protection">
               <span>Malware protection techniques</span>
