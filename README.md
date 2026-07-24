@@ -10,6 +10,7 @@
 **Copyright © 2026 Unboundroot.**
 **All rights reserved.**
 **No part of this website, including the logo, design, or content, may be reproduced or redistributed without permission.**
+**Forking is not permitted**
 
 ## Frontend JavaScript structure
 
