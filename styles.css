@@ -182,7 +182,7 @@ a:focus {
 
 .page-section p {
     font-size: clamp(1rem, 1.8vw, 1.25rem);
-    max-width: 60ch;
+    max-width: 80ch;
     margin: 0 auto 1rem;
 }
 
@@ -483,10 +483,19 @@ a:focus {
     color: #9b2b2b;
 }
 
-.site-footer {
+ .site-footer {
     width: 100%;
     text-align: center;
     padding: 2rem 1rem 3rem;
+} 
+
+.site-footer .compliance {
+    padding: 0;
+}
+
+.compliance a {
+    color: var(--accent-color) !important;
+    text-decoration: underline !important;
 }
 
 @media only screen and (max-width: 768px) {
