@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://formsubmit.co; form-action 'self' https://formsubmit.co; script-src 'self'; object-src 'none'; base-uri 'self'; frame-src 'none'; frame-ancestors 'none';">
+    <meta http-equiv="Content-Security-Policy"
+      content="
+        default-src 'self';
+        connect-src 'self' ws://127.0.0.1:5501;
+        frame-src https://www.youtube.com https://www.youtube-nocookie.com;
+        child-src https://www.youtube.com https://www.youtube-nocookie.com;
+      ">
     <meta http-equiv="Strict-Transport-Security" content="max-age=63072000; includeSubDomains; preload">
     <meta name="description" content="Cybersecurity education for families: videos, downloadable resources, and personalized assessments to help parents protect children online.">
     <link rel="shortcut icon" href="./images/ur_logo_favicon.png" type="image/x-icon">
@@ -29,11 +35,6 @@
         </div>
       </nav>
 
-    <main class="page-shell">
-      <section class="page-section" id="services-intro">
-        <p data-i18n="services.intro.text">We focus exclusively on helping families stay safe online through short videos, downloadable guides, and personalized assessments with clear recommendations.</p>
-      </section>
-
       <section class="page-section" id="offerings">
         <h2 data-i18n="services.offerings.title">Products & Resources</h2>
         <p data-i18n="services.offerings.text">Our main offerings are digital: video lessons and downloadable files (guides, checklists, policy templates). Below is a sample lesson and a downloadable guide to illustrate how content will appear.</p>
@@ -41,21 +42,28 @@
         <div class="media-grid">
           <article class="media-card">
             <div class="media-preview">
-              <!-- Embed a public sample video as a placeholder (replace with real lesson video) -->
-              <iframe src="https://www.youtube.com/embed/YE7VzlLtp-4" title="Sample lesson video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe 
+                width="560px" height="270px" src="https://www.youtube.com/embed/M4U57PwWKpE?si=ZfSIGUvk1tIWBDiB" 
+                title="Parental Controls made easy"></iframe>
             </div>
             <h3 data-i18n="services.lesson.title">Sample lesson: Parental Controls</h3>
-            <p class="muted" data-i18n="services.lesson.text">Example video to show layout. Replace with your lesson media when available.</p>
-            <a class="btn-primary" href="./services.html#offerings" data-i18n="services.lesson.button">View lesson</a>
+            <p class="muted" data-i18n="services.lesson.text">This video will help in the identification of tools to protect your loved ones online.</p>
+            <a class="btn-primary" href="https://www.youtube.com/watch?v=M4U57PwWKpE" target="_blank" rel="noopener noreferrer" data-i18n="services.lesson.button">View lesson</a>
           </article>
 
           <article class="media-card">
             <div class="media-preview file">
-              <img src="./images/creation.jpg" alt="Downloadable guide placeholder">
+              <a href="./assets/Phishing_Safety_Checklist.pdf" target="_blank" rel="noopener"
+                title="Open Phishing Safety Checklist">
+                <img
+                  src="./assets/Phishing_Safety_Checklist_preview.png"
+                  alt="Preview of the Phishing & Social Engineering Safety Checklist"
+                   />
+              </a>
             </div>
             <h3 data-i18n="services.download.title">Download: Phishing Protection Guide</h3>
             <p class="muted" data-i18n="services.download.text">A printable checklist for parents and kids.</p>
-            <a class="btn-primary" href="#" data-i18n="services.download.button">Download sample</a>
+            <a class="btn-primary" href="/assets/Phishing_Safety_Checklist.pdf" download data-i18n="services.download.button">Download sample</a>
           </article>
         </div>
       </section>
@@ -91,7 +99,7 @@
           <div id="form-status" class="form-status" aria-live="polite"></div>
           <button type="submit" value="Submit" class="btn-primary" data-i18n="services.assessment.submit">Request assessment</button>
         </form>
-        <p>Refer to our <a href="./privacy_policy.html" data-i18n="services.privacy-policy">privacy policy</a> and <a href="./terms_of_service.html" data-i18n="services.terms-of-service">terms of service</a> for more information.</p>
+        <p><br>Refer to our <a href="./privacy_policy.html" data-i18n="services.privacy-policy">privacy policy</a> and <a href="./terms_of_service.html" data-i18n="services.terms-of-service">terms of service</a> for more information.</p>
       </section>
 
       <section class="page-section" id="topics">
@@ -99,13 +107,15 @@
         <p data-i18n="services.topics.description">Below are the core topics we teach — each will have a short lesson video and supporting files.</p>
 
         <ul class="card-list" role="list">
-          <li class="card-item service-card" data-title="Parental Controls" data-description="How to set up your devices to share age appropriate content and prevent uses based on age." data-price="Per Assessment" data-conditions="For all ages.">
+          <li class="card-item service-card" data-title="Parental Controls" 
+            data-description="How to set up your devices to share age appropriate content and prevent uses based on age." data-price="Per Assessment" data-conditions="For all ages.">
             <a href="#" class="card-link">
-              <img src="./images/process_improvement.avif" alt="Parental Controls">
+              <img src="./images/parental-controls.jfif" alt="Parental Controls">
               <span>Parental Controls</span>
             </a>
           </li>
-          <li class="card-item service-card" data-title="Phishing protection" data-description="How to identify and avoid phishing attempts and other online scams." data-price="Per Assessment" data-conditions="For all ages.">
+          <li class="card-item service-card" data-title="Phishing protection" 
+            data-description="How to identify and avoid phishing attempts and other online scams." data-price="Per Assessment" data-conditions="For all ages.">
             <a href="#" class="card-link">
               <img src="./images/code.avif" alt="Phishing protection">
               <span>Phishing protection</span>
@@ -113,19 +123,19 @@
           </li>
           <li class="card-item service-card" data-title="Online predator prevention" data-description="How to set up your devices to share age appropriate content and prevent uses based on age." data-price="Per Assessment" data-conditions="For all ages.">
             <a href="#" class="card-link">
-              <img src="./images/mentorship.avif" alt="Online predator prevention">
+              <img src="./images/online-predator.jfif" alt="Online predator prevention">
               <span>Online predator prevention</span>
             </a>
           </li>
           <li class="card-item service-card" data-title="Digital product usage hygiene" data-description="How to set up your devices to share age appropriate content and prevent uses based on age." data-price="Per Assessment" data-conditions="For all ages.">
             <a href="#" class="card-link">
-              <img src="./images/plan.jpg" alt="Digital hygiene">
+              <img src="./images/digital-use-hygiene.jfif" alt="Digital hygiene">
               <span>Digital product usage hygiene</span>
             </a>
           </li>
           <li class="card-item service-card" data-title="Effects of digital use in family dynamics" data-description="How to set up your devices to share age appropriate content and prevent uses based on age." data-price="Per Assessment" data-conditions="For all ages.">
             <a href="#" class="card-link">
-              <img src="./images/sleep_baby.avif" alt="Family dynamics">
+              <img src="./images/family-dynamics.jfif" alt="Family dynamics">
               <span>Effects of digital use in family dynamics</span>
             </a>
           </li>
