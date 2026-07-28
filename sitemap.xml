@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Root -->
+  <url>
+    <loc>https://unboundroot.com/</loc>
+  </url>
+
+  <!-- Main pages -->
+  <url>
+    <loc>https://unboundroot.com/about</loc>
+  </url>
+  <url>
+    <loc>https://unboundroot.com/contact</loc>
+  </url>
+  <url>
+    <loc>https://unboundroot.com/privacy_policy</loc>
+  </url>
+  <url>
+    <loc>https://unboundroot.com/services</loc>
+  </url>
+  <url>
+    <loc>https://unboundroot.com/terms_of_service</loc>
+  </url>
+
+  <!-- Optional subfolders -->
+  <url>
+    <loc>https://unboundroot.com/assets/Phishing_Safety_Checklist.pdf</loc>
+  </url>
+  <url>
+    <loc>https://unboundroot.com/compliance/Website_Compliance_Checklist_Global_Edition.docx</loc>
+  </url>
+
+</urlset>

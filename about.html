@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; frame-src 'none'; frame-ancestors 'none';">
+    <meta http-equiv="Content-Security-Policy"
+      content="
+        default-src 'self';
+        connect-src 'self' ws://127.0.0.1:5501;
+        frame-src https://www.youtube.com https://www.youtube-nocookie.com;
+        child-src https://www.youtube.com https://www.youtube-nocookie.com;
+      ">
     <meta http-equiv="Strict-Transport-Security" content="max-age=63072000; includeSubDomains; preload">
-    <meta name="description" content="Learn about Unbound Root's mission, values, and creative team offering education, process improvement, and tailored support with integrity.">
+    <meta name="description" content="Contact Unbound Root to discuss cyberspace education and awareness services in Washington state and beyond.">
     <link rel="shortcut icon" href="./images/ur_logo_favicon.png" type="image/x-icon">
     <link href="styles.css" rel="stylesheet">
+    <link rel="canonical" href="https://unboundroot.com/about" />
     <title>About Us</title>
   </head>
 
@@ -18,16 +26,16 @@
         <img src="./images/unboundroot_logo.png" alt="Unbound Root Logo">
       </div>
       <ul class="nav-links" id="nav-links">
-          <li><a href="./index.html" data-i18n="nav.home">Home</a></li>
-          <li><a href="./about.html" data-i18n="nav.about">About</a></li>
-          <li><a href="./services.html" data-i18n="nav.services">Services</a></li>
-          <li><a href="./contact.html" data-i18n="nav.contact">Contact</a></li>
-        </ul>
-        <div id="language-switcher" class="language-switcher" data-i18n-attr="aria-label" data-i18n="nav.languageSwitcher">
-          <button type="button" data-lang="en">EN</button>
-          <button type="button" data-lang="es">ES</button>
-        </div>
-      </nav>
+        <li><a href="./index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="./about.html" data-i18n="nav.about">About</a></li>
+        <li><a href="./services.html" data-i18n="nav.services">Services</a></li>
+        <li><a href="./contact.html" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+      <div id="language-switcher" class="language-switcher" data-i18n-attr="aria-label" data-i18n="nav.languageSwitcher">
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="es">ES</button>
+      </div>
+    </nav>
 
     <main class="page-shell">
       <section class="page-section" id="about">
@@ -53,13 +61,16 @@
       </section>
     </main>
 
-    <footer class="site-footer">
+  </body>
+
+  <footer class="site-footer">
       <div class="compliance" id="policies">
         <a href="./privacy_policy.html" data-i18n="footer.privacy">Privacy Policy</a> | 
         <a href="./terms_of_service.html" data-i18n="footer.terms">Terms of Service</a>
       </div>
       <p data-i18n="footer.copyright">© 2026 Unbound Root. All rights reserved.</p>
-    </footer>
-    <script type="module" src="./js/main.js"></script>
-  </body>
+  </footer>
+
+  <script type="module" src="./js/main.js"></script>
+
 </html>

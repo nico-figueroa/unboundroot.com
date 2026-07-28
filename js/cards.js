@@ -1,5 +1,5 @@
 // cards.js — handles interactive service/topic cards
-export function initCards() {
+export default function initCards() {
     document.querySelectorAll('.service-card').forEach((card) => {
         const originalContent = card.innerHTML;
         card.dataset.state = 'image';

@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+  
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://formsubmit.co; form-action 'self' https://formsubmit.co; script-src 'self'; object-src 'none'; base-uri 'self'; frame-src 'none'; frame-ancestors 'none';">
+    <meta http-equiv="Content-Security-Policy"
+      content="
+        default-src 'self';
+        connect-src 'self' https://formsubmit.co ws://127.0.0.1:5501;
+        form-action 'self' https://formsubmit.co;
+        frame-src https://www.youtube.com https://www.youtube-nocookie.com;
+        child-src https://www.youtube.com https://www.youtube-nocookie.com;
+      ">
     <meta http-equiv="Strict-Transport-Security" content="max-age=63072000; includeSubDomains; preload">
-    <meta name="description" content="Contact Unbound Root to discuss creative development, educational collaboration, or custom process improvement services in Washington state and beyond.">
+    <meta name="description" content="Contact Unbound Root to discuss cyberspace education and awareness services in Washington state and beyond.">
     <link rel="shortcut icon" href="./images/ur_logo_favicon.png" type="image/x-icon">
     <link href="styles.css" rel="stylesheet">
+    <link rel="canonical" href="https://unboundroot.com/contact" />
     <title>Contact Us</title>
   </head>
 
@@ -18,31 +27,26 @@
         <img src="./images/unboundroot_logo.png" alt="Unbound Root Logo">
       </div>
       <ul class="nav-links" id="nav-links">
-          <li><a href="./index.html" data-i18n="nav.home">Home</a></li>
-          <li><a href="./about.html" data-i18n="nav.about">About</a></li>
-          <li><a href="./services.html" data-i18n="nav.services">Services</a></li>
-          <li><a href="./contact.html" data-i18n="nav.contact">Contact</a></li>
-        </ul>
-        <div id="language-switcher" class="language-switcher" data-i18n-attr="aria-label" data-i18n="nav.languageSwitcher">
-          <button type="button" data-lang="en">EN</button>
-          <button type="button" data-lang="es">ES</button>
-        </div>
-      </nav>
+        <li><a href="./index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="./about.html" data-i18n="nav.about">About</a></li>
+        <li><a href="./services.html" data-i18n="nav.services">Services</a></li>
+        <li><a href="./contact.html" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+      <div id="language-switcher" class="language-switcher" data-i18n-attr="aria-label" data-i18n="nav.languageSwitcher">
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="es">ES</button>
+      </div>
+    </nav>
 
     <main class="page-shell">
       <section class="page-section" id="contact-intro">
         <p data-i18n="contact.intro">Once you have browsed our services, we'd love to hear from you!</p>
       </section>
-
       <section class="page-section" id="contact-details">
         <h3 data-i18n="contact.where.title">Here's where you can find us:</h3>
         <div class="contact-details">
-          <p data-i18n="contact.phone">Phone: +1 (916) 270-7964</p>
-          <p data-i18n="contact.address">Address: 6408 Seaglass Ave SE</p>
-          <p data-i18n="contact.city">Port Orchard, WA, 98367</p>
           <a class="email-link" href="mailto:nitem18@hotmail.com" data-i18n="contact.email">Email Us: nitem18@hotmail.com</a>
         </div>
-
         <h3 data-i18n="contact.form.title">Or tell us about your needs:</h3>
         <form class="contact-form" action="https://formsubmit.co/808f6043738842ee576f3649aae5f049" method="POST">
           <label for="name" data-i18n="contact.label.name">Name:</label>
@@ -72,5 +76,7 @@
     </footer>
 
     <script type="module" src="./js/main.js"></script>
+
   </body>
+
 </html>

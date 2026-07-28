@@ -1,5 +1,5 @@
 // forms.js — shows inline feedback when FormSubmit returns to the page after a successful submission
-export function initContactForms() {
+export default function initContactForms() {
     const forms = document.querySelectorAll('.contact-form');
 
     forms.forEach((form) => {
@@ -23,9 +23,9 @@ export function initContactForms() {
                 
                 payload._subject = contactForm.querySelector('input[name="_subject"]').value;
                 payload._captcha = contactForm.querySelector('input[name="_captcha"]').value;
-
+                
                 try {
-                    const response = await fetch('https://formsubmit.co/ajax/nitem18@hotmail.com', {
+                    const response = await fetch('https://formsubmit.co/ajax/808f6043738842ee576f3649aae5f049', { //nitem18@hotmail.com
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
