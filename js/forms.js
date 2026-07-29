@@ -1,5 +1,5 @@
 // forms.js — shows inline feedback when FormSubmit returns to the page after a successful submission
-export default function initContactForms() {
+export function initContactForms() {
     const forms = document.querySelectorAll('.contact-form');
 
     forms.forEach((form) => {

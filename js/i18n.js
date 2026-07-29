@@ -131,7 +131,7 @@ const translations = {
   },
 };
 
-export default function initI18n() {
+export function initI18n() {
   const switcher = document.getElementById('language-switcher');
   if (!switcher) return;
 
