@@ -1,48 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Root -->
   <url>
     <loc>https://unboundroot.com/</loc>
     <lastmod>2026-08-27</lastmod>
   </url>
 
-  <!-- Main pages -->
   <url>
-    <loc>https://unboundroot.com/about</loc>
-    <lastmod>2026-08-27</lastmod>
-  </url>
-  <url>
-    <loc>https://unboundroot.com/contact</loc>
-    <lastmod>2026-08-27</lastmod>
-  </url>
-  <url>
-    <loc>https://unboundroot.com/privacy_policy</loc>
-    <lastmod>2026-08-27</lastmod>
-  </url>
-  <url>
-    <loc>https://unboundroot.com/privacy_policy_es</loc>
-    <lastmod>2026-08-27</lastmod>
-  </url>
-  <url>
-    <loc>https://unboundroot.com/services</loc>
-    <lastmod>2026-08-27</lastmod>
-  </url>
-  <url>
-    <loc>https://unboundroot.com/terms_of_service</loc>
-    <lastmod>2026-08-27</lastmod>
-  </url>
-  <url>
-    <loc>https://unboundroot.com/terms_of_service_es</loc>
+    <loc>https://unboundroot.com/about.html</loc>
     <lastmod>2026-08-27</lastmod>
   </url>
 
-  <!-- Optional subfolders -->
+  <url>
+    <loc>https://unboundroot.com/contact.html</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+
+  <url>
+    <loc>https://unboundroot.com/privacy_policy.html</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+
+  <url>
+    <loc>https://unboundroot.com/privacy_policy_es.html</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+
+  <url>
+    <loc>https://unboundroot.com/services.html</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+
+  <url>
+    <loc>https://unboundroot.com/terms_of_service.html</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+
+  <url>
+    <loc>https://unboundroot.com/terms_of_service_es.html</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+
   <url>
     <loc>https://unboundroot.com/assets/Phishing_Safety_Checklist.pdf</loc>
-  </url>
-  <url>
-    <loc>https://unboundroot.com/compliance/Website_Compliance_Checklist_Global_Edition.docx</loc>
+    <lastmod>2026-08-27</lastmod>
   </url>
 
 </urlset>

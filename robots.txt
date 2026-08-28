@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Disallow: /compliance/
+Disallow: /performance/
+Disallow: /test/
+Disallow: /node_modules/
+
+Sitemap: https://unboundroot.com/sitemap.xml

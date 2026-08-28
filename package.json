@@ -8,8 +8,8 @@
     "test": "npm run test:unit && npm run test:e2e"
   },
   "devDependencies": {
-    "jsdom": "^26.1.0",
-    "mocha": "^11.7.2",
-    "selenium-webdriver": "^4.35.0"
+    "jsdom": "^30.0.1",
+    "mocha": "^11.8.0",
+    "selenium-webdriver": "^4.48.0"
   }
 }
