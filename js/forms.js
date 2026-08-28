@@ -10,11 +10,13 @@ export function initContactForms() {
                 event.preventDefault();
 
                 const contactForm = event.target;
-                const submitButton = contactForm.querySelector('input[type="submit"]');
-                const originalLabel = submitButton ? submitButton.value : 'Submit';
+                const submitButton = contactForm.querySelector('button[type="submit"], input[type="submit"]');
+                const isInputButton = submitButton?.tagName.toLowerCase() === 'input';
+                const originalLabel = submitButton ? (isInputButton ? submitButton.value : submitButton.textContent) : 'Submit';
                 
                 if (submitButton) {
-                    submitButton.value = 'Sending...';
+                    if (isInputButton) submitButton.value = 'Sending...';
+                    else submitButton.textContent = 'Sending...';
                     submitButton.disabled = true;
                 }
 
@@ -50,7 +52,8 @@ export function initContactForms() {
                 } finally {
 
                     if (submitButton) {
-                        submitButton.value = originalLabel;
+                        if (isInputButton) submitButton.value = originalLabel;
+                        else submitButton.textContent = originalLabel;
                         submitButton.disabled = false;
                     }
                     

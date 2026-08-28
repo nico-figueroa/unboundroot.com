@@ -4,23 +4,37 @@
   <!-- Root -->
   <url>
     <loc>https://unboundroot.com/</loc>
+    <lastmod>2026-08-27</lastmod>
   </url>
 
   <!-- Main pages -->
   <url>
     <loc>https://unboundroot.com/about</loc>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://unboundroot.com/contact</loc>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://unboundroot.com/privacy_policy</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://unboundroot.com/privacy_policy_es</loc>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://unboundroot.com/services</loc>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://unboundroot.com/terms_of_service</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://unboundroot.com/terms_of_service_es</loc>
+    <lastmod>2026-08-27</lastmod>
   </url>
 
   <!-- Optional subfolders -->

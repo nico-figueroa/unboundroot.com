@@ -20,10 +20,10 @@
     <title>Terms of Service — Unbound Root</title>
   </head>
 
-  <body>
+  <body data-legal-page="terms">
     <nav class="navbar">
         <div class="logo">
-          <img src="./images/unboundroot_logo.png" alt="Unbound Root Logo">
+          <img src="./images/unboundroot_logo.webp" alt="Unbound Root Logo" width="512" height="512">
         </div>
         <ul class="nav-links" id="nav-links">
             <li><a href="./index.html" data-i18n="nav.home">Home</a></li>
@@ -32,8 +32,8 @@
             <li><a href="./contact.html" data-i18n="nav.contact">Contact</a></li>
           </ul>
           <div id="language-switcher" class="language-switcher" data-i18n-attr="aria-label" data-i18n="nav.languageSwitcher">
-            <button type="button" data-lang="en">EN</button>
-            <button type="button" data-lang="es">ES</button>
+            <button type="button" data-legal-lang="en">EN</button>
+            <button type="button" data-legal-lang="es">ES</button>
           </div>
     </nav>
     
@@ -595,5 +595,7 @@
       Hosted via GitHub Pages.
     </p>
   </footer>
+
+  <script type="module" src="./js/legal-language.js"></script>
 
 </html>
