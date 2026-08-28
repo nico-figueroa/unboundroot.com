@@ -10,12 +10,16 @@
         default-src 'self';
         connect-src 'self' https://formsubmit.co ws://127.0.0.1:5501;
         form-action 'self' https://formsubmit.co;
+        img-src 'self' https://i.ytimg.com;
         frame-src https://www.youtube.com https://www.youtube-nocookie.com;
         child-src https://www.youtube.com https://www.youtube-nocookie.com;
+        object-src 'none';
+        base-uri 'self';
       ">
     <meta http-equiv="Strict-Transport-Security" content="max-age=63072000; includeSubDomains; preload">
     <meta name="description" content="Contact Unbound Root to discuss cyberspace education and awareness services in Washington state and beyond.">
-    <link rel="shortcut icon" href="./images/ur_logo_favicon.png" type="image/x-icon">
+    <link rel="icon" href="./images/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="./images/favicon-180.png">
     <link href="styles.css" rel="stylesheet">
     <link rel="canonical" href="https://unboundroot.com/services" />
     <title>Services</title>
@@ -43,9 +47,10 @@
       <div class="media-grid">
         <article class="media-card">
           <div class="media-preview">
-            <iframe 
-              width="560px" height="270px" src="https://www.youtube.com/embed/M4U57PwWKpE?si=ZfSIGUvk1tIWBDiB" 
-              title="Parental Controls made easy"></iframe>
+            <span class="yt-facade" data-yt-facade data-video-id="M4U57PwWKpE" data-video-title="Parental Controls made easy" role="button" tabindex="0" aria-label="Play video: Parental Controls made easy">
+              <img src="https://i.ytimg.com/vi/M4U57PwWKpE/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async">
+              <span class="yt-facade-play" aria-hidden="true"></span>
+            </span>
           </div>
           <h3 data-i18n="services.lesson.title">Sample lesson: Parental Controls</h3>
           <p class="muted" data-i18n="services.lesson.text">This video will help in the identification of tools to protect your loved ones online.</p>

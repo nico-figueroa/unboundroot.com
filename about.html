@@ -9,12 +9,13 @@
       content="
         default-src 'self';
         connect-src 'self' ws://127.0.0.1:5501;
-        frame-src https://www.youtube.com https://www.youtube-nocookie.com;
-        child-src https://www.youtube.com https://www.youtube-nocookie.com;
+        object-src 'none';
+        base-uri 'self';
       ">
     <meta http-equiv="Strict-Transport-Security" content="max-age=63072000; includeSubDomains; preload">
     <meta name="description" content="Contact Unbound Root to discuss cyberspace education and awareness services in Washington state and beyond.">
-    <link rel="shortcut icon" href="./images/ur_logo_favicon.png" type="image/x-icon">
+    <link rel="icon" href="./images/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="./images/favicon-180.png">
     <link href="styles.css" rel="stylesheet">
     <link rel="canonical" href="https://unboundroot.com/about" />
     <title>About Us</title>
@@ -50,11 +51,17 @@
         <h2 data-i18n="about.team.title">Our Team</h2>
         <ul class="card-list" role="list">
           <li class="card-item">
-            <img src="./images/naty.png" alt="Picture of Naty">
+            <picture>
+              <source srcset="./images/naty.webp" type="image/webp">
+              <img src="./images/naty.png" alt="Picture of Naty" width="800" height="533" loading="lazy" decoding="async">
+            </picture>
             <p data-i18n="about.naty">Nat is a lifelong educator who has a variety of experiences as adaptive function specialist, gentle sleep guide, and childcare which allows her to identify and customize solutions for each individual. Her creativity for art and crafting is unparallelled!</p>
           </li>
           <li class="card-item">
-            <img src="./images/nico.png" alt="Picture of Nico">
+            <picture>
+              <source srcset="./images/nico.webp" type="image/webp">
+              <img src="./images/nico.png" alt="Picture of Nico" width="800" height="800" loading="lazy" decoding="async">
+            </picture>
             <p data-i18n="about.nico">Nico is passionate about systems thinking in all areas of knowledge. He has a unique blend of skills and experiences in software and hardwareengineering, process improvement, and leadership that enables him to quickly approach any system, synthesize information, and provide effective solutions.</p>
           </li>
         </ul>
