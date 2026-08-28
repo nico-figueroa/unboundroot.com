@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/nomadant/Unbound-Root/main/images/unboundroot_logo.webp" alt="Unbound Root banner" width="1200" />
-</p>
-
 # Unbound Root
 
 <p align="center">
@@ -28,7 +24,7 @@ The project is published under the custom domain: https://unboundroot.com
 
 <p align="center">
   <a href="https://unboundroot.com" target="_blank" rel="noopener noreferrer">
-    <img src="https://raw.githubusercontent.com/nomadant/Unbound-Root/main/images/unboundroot_logo.webp" alt="Unbound Root logo" width="260" />
+    <img src="https://github.com/nico-figueroa/unboundroot.com/blob/main/images/unboundroot_logo.webp" alt="Unbound Root logo" width="260" />
   </a>
 </p>
 
