@@ -8,16 +8,22 @@
     <meta http-equiv="Content-Security-Policy"
       content="
         default-src 'self';
+        script-src 'self';
+        style-src 'self';
+        form-action 'self';
         connect-src 'self' ws://127.0.0.1:5501;
         object-src 'none';
         base-uri 'self';
       ">
     <meta http-equiv="Strict-Transport-Security" content="max-age=63072000; includeSubDomains; preload">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="description" content="Review Unbound Root's terms of service for information about using our website, educational resources, personalized assessments, and related services.">
     <link rel="icon" href="./images/favicon-32.png" sizes="32x32" type="image/png">
     <link rel="apple-touch-icon" href="./images/favicon-180.png">
     <link href="styles.css" rel="stylesheet">
     <link rel="canonical" href="https://unboundroot.com/terms_of_service.html">
+    <link rel="alternate" hreflang="en" href="https://unboundroot.com/terms_of_service.html">
+    <link rel="alternate" hreflang="es-CR" href="https://unboundroot.com/terms_of_service_es.html">
     <title>Terms of Service — Unbound Root</title>
   </head>
 
@@ -27,7 +33,7 @@
           <img src="./images/unboundroot_logo.webp" alt="Unbound Root Logo" width="512" height="512">
         </div>
         <ul class="nav-links" id="nav-links">
-            <li><a href="./index.html" data-i18n="nav.home">Home</a></li>
+            <li><a href="/" data-i18n="nav.home">Home</a></li>
             <li><a href="./about.html" data-i18n="nav.about">About</a></li>
             <li><a href="./services.html" data-i18n="nav.services">Services</a></li>
             <li><a href="./contact.html" data-i18n="nav.contact">Contact</a></li>
@@ -587,6 +593,7 @@
   </body>
 
   <footer class="site-footer">
+    <p>This is the official unboundroot.com site hosted via GitHub Pages.</p>
     <p>
       Terms of Service — Global Edition | Unbound Root | Port Orchard, Washington, USA | Effective July 25, 2026
     </p>

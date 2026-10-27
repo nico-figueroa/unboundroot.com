@@ -8,6 +8,8 @@
     <meta http-equiv="Content-Security-Policy"
       content="
         default-src 'self';
+        script-src 'self';
+        style-src 'self';
         connect-src 'self' https://formsubmit.co ws://127.0.0.1:5501;
         form-action 'self' https://formsubmit.co;
         img-src 'self' https://i.ytimg.com;
@@ -17,6 +19,7 @@
         base-uri 'self';
       ">
     <meta http-equiv="Strict-Transport-Security" content="max-age=63072000; includeSubDomains; preload">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="description" content="Explore Unbound Root services, including cybersecurity education, digital safety resources, family guidance, and personalized assessments for safer web habits.">
     <link rel="icon" href="./images/favicon-32.png" sizes="32x32" type="image/png">
     <link rel="apple-touch-icon" href="./images/favicon-180.png">
@@ -31,7 +34,7 @@
         <img src="./images/unboundroot_logo.webp" alt="Unbound Root Logo" width="512" height="512">
       </div>
       <ul class="nav-links" id="nav-links">
-        <li><a href="./index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="/" data-i18n="nav.home">Home</a></li>
         <li><a href="./about.html" data-i18n="nav.about">About</a></li>
         <li><a href="./services.html" data-i18n="nav.services">Services</a></li>
         <li><a href="./contact.html" data-i18n="nav.contact">Contact</a></li>
@@ -76,6 +79,10 @@
       <h2 data-i18n="services.assessment.title">Personalized Assessment & Recommendations</h2>
       <p data-i18n="services.assessment.text">Get a tailored plan for your needs. Fill the short assessment and we'll provide recommended learning paths and resources.</p>
       <form class="contact-form" action="https://formsubmit.co/808f6043738842ee576f3649aae5f049" method="POST" aria-label="Family cybersecurity assessment">
+        <div class="form-honeypot" aria-hidden="true">
+          <label for="assessment-website">Leave this field blank</label>
+          <input type="text" id="assessment-website" name="website" tabindex="-1" autocomplete="off">
+        </div>
         <label data-i18n="services.assessment.parent_name">Your name</label>
         <input type="text" name="parent_name" placeholder="Your name" data-i18n-placeholder="services.assessment.parent_name">
         <label data-i18n="services.assessment.email">Email</label>
@@ -152,6 +159,7 @@
     </section>
   
     <footer class="site-footer">
+      <p>This is the official unboundroot.com site hosted via GitHub Pages.</p>
       <div class="compliance" id="policies">
         <a href="./privacy_policy.html" data-i18n="footer.privacy">Privacy Policy</a> | 
         <a href="./terms_of_service.html" data-i18n="footer.terms">Terms of Service</a>

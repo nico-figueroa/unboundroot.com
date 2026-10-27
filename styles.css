@@ -515,6 +515,14 @@ a:focus {
     display: none;
 }
 
+.form-honeypot {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
 .form-status.success {
     display: block;
     background: color-mix(in srgb, var(--accent-color) 10%, transparent 90%);

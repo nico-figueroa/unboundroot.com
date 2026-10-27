@@ -10,6 +10,13 @@ export function initContactForms() {
                 event.preventDefault();
 
                 const contactForm = event.target;
+                const honeypot = contactForm.querySelector('input[name="website"]');
+                if (honeypot?.value.trim()) {
+                    formStatus.textContent = 'Please leave the website field blank and try again.';
+                    formStatus.className = 'form-status error';
+                    return;
+                }
+
                 const submitButton = contactForm.querySelector('button[type="submit"], input[type="submit"]');
                 const isInputButton = submitButton?.tagName.toLowerCase() === 'input';
                 const originalLabel = submitButton ? (isInputButton ? submitButton.value : submitButton.textContent) : 'Submit';
@@ -22,6 +29,7 @@ export function initContactForms() {
 
                 const formData = new FormData(contactForm);
                 const payload = Object.fromEntries(formData.entries());
+                delete payload.website;
                 
                 payload._subject = contactForm.querySelector('input[name="_subject"]').value;
                 payload._captcha = contactForm.querySelector('input[name="_captcha"]').value;

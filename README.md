@@ -129,11 +129,13 @@ Unbound Root/
 
 The site includes:
 
-- Content Security Policy headers
-- Strict Transport Security settings
-- No-Sniff header configuration
+- Page-level Content Security Policy and Referrer-Policy meta elements
+- A client-side form honeypot; this is not server-side validation or rate limiting
+- A `/.well-known/security.txt` security contact
 - Privacy and terms documentation
 - Clear contact and data handling communication
+
+GitHub Pages currently serves the site with an HSTS response header, but this repository cannot configure custom HTTP response headers such as `X-Frame-Options`. Meta elements do not replace those headers. CAPTCHA, server-side form validation, rate limiting, and origin restrictions require hosting or FormSubmit account configuration.
 
 ## Local development
 

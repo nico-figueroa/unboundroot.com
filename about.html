@@ -8,17 +8,21 @@
     <meta http-equiv="Content-Security-Policy"
       content="
         default-src 'self';
+        script-src 'self';
+        style-src 'self';
+        form-action 'self';
         connect-src 'self' ws://127.0.0.1:5501;
         object-src 'none';
         base-uri 'self';
       ">
     <meta http-equiv="Strict-Transport-Security" content="max-age=63072000; includeSubDomains; preload">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="description" content="Meet Unbound Root, a digital safety team helping individuals and families build confidence through cybersecurity education, guidance, and tailored support.">
     <link rel="icon" href="./images/favicon-32.png" sizes="32x32" type="image/png">
     <link rel="apple-touch-icon" href="./images/favicon-180.png">
     <link href="styles.css" rel="stylesheet">
     <link rel="canonical" href="https://unboundroot.com/about.html" />
-    <title>About Unbound Root | Practical Digital Safety Expertise</title>
+    <title>About Unbound Root | Cybersecurity Education for Everyone</title>
   </head>
 
   <body>
@@ -27,7 +31,7 @@
         <img src="./images/unboundroot_logo.webp" alt="Unbound Root Logo" width="512" height="512">
       </div>
       <ul class="nav-links" id="nav-links">
-        <li><a href="./index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="/" data-i18n="nav.home">Home</a></li>
         <li><a href="./about.html" data-i18n="nav.about">About</a></li>
         <li><a href="./services.html" data-i18n="nav.services">Services</a></li>
         <li><a href="./contact.html" data-i18n="nav.contact">Contact</a></li>
@@ -52,13 +56,6 @@
         <ul class="card-list" role="list">
           <li class="card-item">
             <picture>
-              <source srcset="./images/naty.webp" type="image/webp">
-              <img src="./images/naty.png" alt="Picture of Naty" width="800" height="533" loading="lazy" decoding="async">
-            </picture>
-            <p data-i18n="about.naty">Nat is a lifelong educator who has a variety of experiences as adaptive function specialist, gentle sleep guide, and childcare which allows her to identify and customize solutions for each individual. Her creativity for art and crafting is unparallelled!</p>
-          </li>
-          <li class="card-item">
-            <picture>
               <source srcset="./images/nico.webp" type="image/webp">
               <img src="./images/nico.png" alt="Picture of Nico" width="800" height="800" loading="lazy" decoding="async">
             </picture>
@@ -71,6 +68,7 @@
   </body>
 
   <footer class="site-footer">
+      <p>This is the official unboundroot.com site hosted via GitHub Pages.</p>
       <div class="compliance" id="policies">
         <a href="./privacy_policy.html" data-i18n="footer.privacy">Privacy Policy</a> | 
         <a href="./terms_of_service.html" data-i18n="footer.terms">Terms of Service</a>
