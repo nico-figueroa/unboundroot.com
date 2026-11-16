@@ -80,6 +80,10 @@ Unbound Root is a modern informational site designed to provide short educationa
 - GitHub Pages
 - Custom domain: `unboundroot.com`
 - Static site hosting with no framework build step required
+- Azure Static Web Apps deployment runs on pushes to `main`. Set the repository Actions secret
+  `AZURE_STATIC_WEB_APPS_API_TOKEN_WONDERFUL_GLACIER_0B60E4E0F` to the deployment token
+  from the intended Azure Static Web App. If Azure rejects the token, verify the resource
+  exists and update the secret with its current deployment token.
 
 ## Project structure
 
