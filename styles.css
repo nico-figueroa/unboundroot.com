@@ -148,6 +148,25 @@ a:focus {
     display: none;
 }
 
+.language-switcher .flag {
+    display: inline-block;
+    width: 1.4em;
+    height: 0.95em;
+    margin-right: 0.4em;
+    vertical-align: -0.1em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.language-switcher .flag-us {
+    background-image: url("./images/flag-us.svg");
+}
+
+.language-switcher .flag-cr {
+    background-image: url("./images/flag-cr.svg");
+}
+
 .page-shell {
     width: min(90%, 1200px);
     padding: 0 1rem 3rem;
