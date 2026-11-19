@@ -50,7 +50,7 @@ describe('Unbound Root site', function () {
 
   it('switches the interface to Spanish and persists the language', async () => {
     await browser.get(`${site.url}/index.html`);
-    await browser.findElement(By.css('#language-switcher button[data-lang="es"]')).click();
+    await browser.findElement(By.css('#language-switcher button[data-lang="en"]')).click();
     assert.equal(await browser.findElement(By.css('html')).getAttribute('lang'), 'es-CR');
     assert.equal(await browser.executeScript('return localStorage.getItem("siteLanguage")'), 'es');
   });

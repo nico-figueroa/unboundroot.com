@@ -15,8 +15,8 @@ const translations = {
     'services.intro.text': 'We want to help you stay safe online through short videos, downloadable guides, and personalized assessments with clear recommendations.',
     'services.offerings.title': 'Products & Resources',
     'services.offerings.text': 'Our main offerings are digital: video lessons and downloadable files (guides, checklists, policy templates). Below are a video and a downloadable guide examples.',
-    'services.lesson.title': 'Educational Video: Parental Controls',
-    'services.lesson.text': 'This video will help in the identification of tools to protect your loved ones online.',
+    'services.lesson.title': 'Educational Video: Cybersecurity',
+    'services.lesson.text': 'This video provides practical cybersecurity guidance to help you protect yourself and your loved ones online.',
     'services.lesson.button': 'View lesson',
     'services.download.title': 'Download: Phishing Protection Guide',
     'services.download.text': 'A printable checklist of tips to prevent Phishing and other common social engineering attacks.',
@@ -82,8 +82,8 @@ const translations = {
     'services.intro.text': 'Queremos ayudarlo a mantenerse seguro en línea mediante videos cortos, guías descargables y evaluaciones personalizadas con recomendaciones claras.',
     'services.offerings.title': 'Productos y recursos',
     'services.offerings.text': 'Nuestras principales ofertas son digitales: lecciones en video y archivos descargables (guías, listas de verificación, plantillas de políticas). A continuación hay un video y una guía descargable de ejemplo.',
-    'services.lesson.title': 'Video Educativo: Controles parentales',
-    'services.lesson.text': 'Este video ayudara con la identificacion de herramientas para protejer a sus seres queridos en linea.',
+    'services.lesson.title': 'Video educativo: Ciberseguridad',
+    'services.lesson.text': 'Este video ofrece consejos prácticos de ciberseguridad para ayudarlo a protegerse a usted y a sus seres queridos en línea.',
     'services.download.title': 'Descargar: Guía de protección contra phishing',
     'services.download.text': 'Una lista imprimible de consejos para prevenir Phishing y otros ataques comunes de ingenieria social.',
     'services.download.button': 'Descargar muestra',
@@ -142,8 +142,8 @@ export function initI18n() {
     button.addEventListener('click', (event) => {
       event.preventDefault();
       event.stopPropagation();
-      const selected = button.getAttribute('data-lang');
-      if (selected) applyLanguage(selected);
+      const current = button.getAttribute('data-lang');
+      if (current) applyLanguage(current === 'en' ? 'es' : 'en');
     });
   });
 }
@@ -194,7 +194,10 @@ function applyLanguage(lang) {
   });
 
   document.querySelectorAll('[data-lang]').forEach((button) => {
-    button.classList.toggle('active', button.getAttribute('data-lang') === lang);
+    const isActive = button.getAttribute('data-lang') === lang;
+    button.classList.toggle('active', isActive);
+    button.hidden = !isActive;
+    button.setAttribute('aria-label', lang === 'en' ? 'Switch to Spanish' : 'Cambiar a inglés');
   });
 }
 

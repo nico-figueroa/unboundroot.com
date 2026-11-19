@@ -144,6 +144,10 @@ a:focus {
     color: var(--accent-foreground);
 }
 
+.language-switcher button[hidden] {
+    display: none;
+}
+
 .page-shell {
     width: min(90%, 1200px);
     padding: 0 1rem 3rem;
