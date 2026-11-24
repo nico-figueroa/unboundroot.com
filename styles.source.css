@@ -142,7 +142,7 @@
   .service-details h3 { @apply font-display text-2xl; }
   .service-details p { @apply mt-4 text-sm leading-6 text-ink-700; }
   .service-details strong { @apply text-ink-950; }
-  .resource-grid { @apply mt-10 grid gap-6 lg:grid-cols-2; }
+  .resource-grid { @apply mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3; }
   .resource-card { @apply overflow-hidden rounded-3xl border border-border bg-white shadow-card; }
   .resource-card__media { @apply h-72 overflow-hidden bg-ink-950; }
   .resource-card__media img { @apply h-full w-full object-cover; }
@@ -152,6 +152,9 @@
   .resource-source { @apply mb-2 block text-xs font-bold uppercase tracking-[0.12em] text-teal-700; }
   .resource-card__body p { @apply mt-3 text-ink-700; }
   .resource-card__body .button { @apply mt-6; }
+  .resource-card__signals { @apply mt-5 grid gap-2 text-sm leading-6 text-ink-700; }
+  .resource-card__signals li { @apply relative pl-5; }
+  .resource-card__signals li::before { content: "→"; @apply absolute left-0 font-bold text-teal-700; }
   .resource-card__file { @apply bg-paper p-6; }
   .yt-facade { @apply relative block h-full cursor-pointer; }
   .yt-facade-play { @apply absolute left-1/2 top-1/2 flex size-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white/95 shadow-xl; }
