@@ -3,6 +3,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38BDF8?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
   <img src="https://img.shields.io/badge/ES%20Modules-000000?style=for-the-badge&logo=javascript&logoColor=white" alt="ES Modules" />
   <img src="https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=githubpages&logoColor=white" alt="GitHub Pages" />
@@ -60,10 +61,12 @@ Unbound Root is a modern informational site designed to provide short educationa
 
 ### Frontend
 - HTML5
-- CSS3
+- Tailwind CSS v4
 - JavaScript (ES modules)
 - Custom DOM-based client-side interactivity
 - LocalStorage-backed language preference handling
+
+Tailwind is authored in `styles.source.css` and compiled to the `styles.css` file served by GitHub Pages.
 
 ### Site features and integrations
 - FormSubmit for form delivery
@@ -141,8 +144,11 @@ GitHub Pages currently serves the site with an HSTS response header, but this re
 
 ```bash
 npm install
+npm run build:css
 npm test
 ```
+
+Use `npm run watch:css` while editing the site's styles.
 
 ## License and usage
 

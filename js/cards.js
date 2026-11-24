@@ -3,6 +3,7 @@ export function initCards() {
     document.querySelectorAll('.service-card').forEach((card) => {
         const originalContent = card.innerHTML;
         card.dataset.state = 'image';
+        card.querySelector('.card-link')?.setAttribute('aria-expanded', 'false');
 
         card.addEventListener('click', (event) => {
             event.preventDefault();
@@ -14,12 +15,16 @@ export function initCards() {
                 if (otherCard !== card && otherCard.dataset.state === 'details') {
                     otherCard.innerHTML = otherCard.dataset.originalContent || otherCard.innerHTML;
                     otherCard.dataset.state = 'image';
+                    otherCard.querySelector('.card-link')?.setAttribute('aria-expanded', 'false');
+                    document.dispatchEvent(new window.CustomEvent('i18n:refresh'));
                 }
             });
 
             if (card.dataset.state === 'details') {
                 card.innerHTML = originalContent;
                 card.dataset.state = 'image';
+                card.querySelector('.card-link')?.setAttribute('aria-expanded', 'false');
+                document.dispatchEvent(new window.CustomEvent('i18n:refresh'));
                 return;
             }
 
@@ -38,6 +43,7 @@ export function initCards() {
                     <p><strong>${labels.description}:</strong> ${description}</p>
                     <p><strong>${labels.price}:</strong> ${price}</p>
                     <p><strong>${labels.conditions}:</strong> ${conditions}</p>
+                    <button type="button" class="button button--secondary mt-5">${isSpanish ? 'Cerrar detalles' : 'Close details'}</button>
                 </div>
             `;
             card.dataset.state = 'details';

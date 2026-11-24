@@ -6,7 +6,11 @@ describe('language switching', () => {
     localStorage.clear();
     document.body.innerHTML = `
       <div id="language-switcher" data-i18n-attr="aria-label" data-i18n="nav.languageSwitcher">
-        <button data-lang="en" class="active"><span class="flag flag-us" aria-hidden="true"></span>English</button><button data-lang="es" hidden><span class="flag flag-cr" aria-hidden="true"></span>Spanish</button>
+        <button type="button" data-language-trigger><span data-current-flag></span><span data-current-language>English</span></button>
+        <div class="language-menu" hidden>
+          <button type="button" data-lang="en">English</button>
+          <button type="button" data-lang="es">Español</button>
+        </div>
       </div>
       <h1 data-i18n="hero.title"></h1>
       <input data-i18n-placeholder="services.assessment.details.placeholder">
@@ -17,18 +21,14 @@ describe('language switching', () => {
   it('initializes English and switches to Costa Rican Spanish', () => {
     initI18n();
     assert.equal(document.documentElement.lang, 'en');
-    assert.equal(document.querySelector('[data-lang="en"]').classList.contains('active'), true);
+    assert.equal(document.querySelector('[data-current-language]').textContent, 'English');
 
-    assert.equal(document.querySelector('[data-lang="es"]').hidden, true);
-    document.querySelector('[data-lang="en"]').click();
+    document.querySelector('[data-lang="es"]').click();
     assert.equal(document.documentElement.lang, 'es-CR');
     assert.equal(localStorage.getItem('siteLanguage'), 'es');
-    assert.equal(document.querySelector('h1').textContent, 'Unbound Root');
-    assert.equal(document.querySelector('input').placeholder, 'Cuéntanos brevemente sobre tu situación');
-    assert.equal(document.querySelector('[data-lang="es"]').classList.contains('active'), true);
-    assert.equal(document.querySelector('[data-lang="es"]').hidden, false);
-    assert.equal(document.querySelector('[data-lang="en"]').hidden, true);
-    assert.equal(document.querySelector('[data-lang="es"] .flag-cr').getAttribute('aria-hidden'), 'true');
+    assert.equal(document.querySelector('h1').textContent, 'Tome cada decisión digital con más confianza.');
+    assert.equal(document.querySelector('input').placeholder, 'Comparta una breve descripción de la situación…');
+    assert.equal(document.querySelector('[data-current-language]').textContent, 'Español');
   });
 
   it('falls back to English when stored language is unsupported', () => {

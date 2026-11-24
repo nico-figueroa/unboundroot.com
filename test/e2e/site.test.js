@@ -41,7 +41,7 @@ describe('Unbound Root site', function () {
 
   it('loads the home page and navigates to services', async () => {
     await browser.get(`${site.url}/index.html`);
-    assert.equal(await browser.getTitle(), 'Unbound Root');
+    assert.equal(await browser.getTitle(), 'Unbound Root | Confident Digital Safety for Every Generation');
     const assessmentLink = await browser.findElement(By.css('a[href="./services.html#assessment"]'));
     await browser.executeScript('arguments[0].click()', assessmentLink);
     await browser.wait(until.urlContains('/services.html'), 5000);
@@ -50,7 +50,8 @@ describe('Unbound Root site', function () {
 
   it('switches the interface to Spanish and persists the language', async () => {
     await browser.get(`${site.url}/index.html`);
-    await browser.findElement(By.css('#language-switcher button[data-lang="en"]')).click();
+    await browser.findElement(By.css('[data-language-trigger]')).click();
+    await browser.findElement(By.css('[data-lang="es"]')).click();
     assert.equal(await browser.findElement(By.css('html')).getAttribute('lang'), 'es-CR');
     assert.equal(await browser.executeScript('return localStorage.getItem("siteLanguage")'), 'es');
   });

@@ -1,81 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="Content-Security-Policy"
-      content="
-        default-src 'self';
-        script-src 'self';
-        style-src 'self';
-        form-action 'self';
-        connect-src 'self' ws://127.0.0.1:5501;
-        object-src 'none';
-        base-uri 'self';
-      ">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; form-action 'self'; connect-src 'self' ws://127.0.0.1:5501; img-src 'self' https://i.ytimg.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com; child-src https://www.youtube.com https://www.youtube-nocookie.com; object-src 'none'; base-uri 'self';">
     <meta http-equiv="Strict-Transport-Security" content="max-age=63072000; includeSubDomains; preload">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta name="description" content="Meet Unbound Root, a digital safety team helping individuals and families build confidence through cybersecurity education, guidance, and tailored support.">
+    <meta name="description" content="Meet Unbound Root founder Nicolas Figueroa and learn how systems thinking, engineering, information management, and practical education shape the service.">
+    <meta name="theme-color" content="#f7f6f1">
     <link rel="icon" href="./images/favicon-32.png" sizes="32x32" type="image/png">
     <link rel="apple-touch-icon" href="./images/favicon-180.png">
     <link href="styles.css" rel="stylesheet">
-    <link rel="canonical" href="https://unboundroot.com/about.html" />
-    <title>About Unbound Root | Cybersecurity Education for Everyone</title>
+    <link rel="canonical" href="https://unboundroot.com/about.html">
+    <title>About Unbound Root | Practical Digital Safety Guidance</title>
   </head>
-
   <body>
-    <nav class="navbar">
-      <div class="logo">
-        <img src="./images/unboundroot_logo.webp" alt="Unbound Root Logo" width="512" height="512">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="brand" href="/" aria-label="Unbound Root home"><img class="brand__mark" src="./images/unboundroot_logo.webp" alt="" width="512" height="512"><span class="brand__text">Unbound Root</span></a>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+        <nav class="site-nav" id="primary-nav" data-open="false" aria-label="Primary navigation">
+          <ul class="nav-list">
+            <li><a href="/" data-i18n="nav.home" class="nav-link">Home</a></li>
+            <li><a href="./about.html" data-i18n="nav.about" class="nav-link" aria-current="page">About</a></li>
+            <li><a href="./services.html" data-i18n="nav.services" class="nav-link">Services</a></li>
+            <li><a href="./contact.html" data-i18n="nav.contact" class="nav-link">Contact</a></li>
+          </ul>
+          <div class="nav-actions">
+            <div id="language-switcher" class="language-picker" data-i18n-attr="aria-label" data-i18n="nav.languageSwitcher"><button class="language-switcher" type="button" data-language-trigger aria-expanded="false" aria-controls="language-menu"><span class="flag flag--us" data-current-flag aria-hidden="true"></span><span data-current-language>English</span><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="m5 7 5 5 5-5H5Z"/></svg></button><div class="language-menu" id="language-menu" hidden><button class="language-option" type="button" data-lang="en"><span class="flag flag--us" aria-hidden="true"></span>English</button><button class="language-option" type="button" data-lang="es"><span class="flag flag--cr" aria-hidden="true"></span>Español</button></div></div>
+            <a class="button button--primary" href="./contact.html" data-i18n="nav.cta">Start a conversation</a>
+          </div>
+        </nav>
       </div>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="/" data-i18n="nav.home">Home</a></li>
-        <li><a href="./about.html" data-i18n="nav.about">About</a></li>
-        <li><a href="./services.html" data-i18n="nav.services">Services</a></li>
-        <li><a href="./contact.html" data-i18n="nav.contact">Contact</a></li>
-      </ul>
-      <div id="language-switcher" class="language-switcher" data-i18n-attr="aria-label" data-i18n="nav.languageSwitcher">
-        <button type="button" data-lang="en" class="active"><span class="flag flag-us" aria-hidden="true"></span>English</button>
-        <button type="button" data-lang="es" hidden><span class="flag flag-cr" aria-hidden="true"></span>Spanish</button>
-      </div>
-    </nav>
+    </header>
 
-    <main class="page-shell">
-      <section class="page-section" id="about">
-        <h1 data-i18n="about.title">About Us</h1>
-        <p data-i18n="about.text">We help everyone navigate the digital world with confidence. Our mission is to provide practical, research-backed education and resources so you and your loved ones can feel protected and empowered online.</p>
-        <p data-i18n="about.copy">We combine the ideals of freedom of thought with strong senses of identity and integrity in every service offering.</p>
-        <p data-i18n="about.additional">Your unique experience and delivering something meaningful is at the core of our purpose.</p>
-        <p data-i18n="about.extra">We think creatively and act with purpose.</p>
+    <main id="main-content">
+      <section class="page-hero">
+        <div class="page-hero__inner">
+          <div class="page-hero__copy">
+            <span class="eyebrow" data-i18n="about.eyebrow">The purpose behind Unbound Root</span>
+            <h1 data-i18n="about.title">Technology should create confidence, not complexity.</h1>
+            <p class="page-hero__lead" data-i18n="about.text">Unbound Root helps people navigate digital risks with clear education, thoughtful questions, and practical recommendations grounded in how real households and systems work.</p>
+            <div class="page-hero__actions">
+              <a class="button button--primary" href="./contact.html" data-i18n="about.cta">Talk about your needs</a>
+              <a class="button button--secondary" href="./services.html" data-i18n="about.secondary">See how we help</a>
+            </div>
+          </div>
+          <div class="image-frame">
+            <img src="./images/nico-headshot-2026.jpeg" alt="Nicolas Figueroa, founder of Unbound Root" width="768" height="932" decoding="async">
+          </div>
+        </div>
       </section>
 
-      <section class="page-section" id="team">
-        <h2 data-i18n="about.team.title">Our Team</h2>
-        <ul class="card-list" role="list">
-          <li class="card-item">
-            <picture>
-              <source srcset="./images/nico.webp" type="image/webp">
-              <img src="./images/nico.png" alt="Picture of Nico" width="800" height="800" loading="lazy" decoding="async">
-            </picture>
-            <p data-i18n="about.nico">Nico is passionate about systems thinking in all areas of knowledge. He has a unique blend of skills and experiences in software and hardwareengineering, process improvement, and leadership that enables him to quickly approach any system, synthesize information, and provide effective solutions.</p>
-          </li>
-        </ul>
+      <section class="section section--white">
+        <div class="section__inner split-grid">
+          <div class="section__heading">
+            <span class="eyebrow" data-i18n="about.founder.eyebrow">Meet the founder</span>
+            <h2 data-i18n="about.founder.title">Nicolas Figueroa Hidalgo</h2>
+            <p data-i18n="about.founder.intro">A product builder and systems thinker with a cross-industry foundation in engineering, information management, software, process improvement, and operational leadership.</p>
+            <p class="mt-4" data-i18n="about.founder.body">Nicolas approaches digital safety as a human and technical system. The goal is not to add fear or unnecessary tools—it is to understand the problem, simplify the environment, and identify actions that create durable value for the people using it.</p>
+            <div class="mt-7">
+              <a class="button button--secondary" href="https://nicolas-figueroa.me/" target="_blank" rel="noopener noreferrer" data-i18n="about.profile">Explore the full professional profile</a>
+            </div>
+          </div>
+          <div class="credential-grid">
+            <div class="credential"><strong>M.S. in Information Management</strong><span>University of Washington · 4.0 GPA</span></div>
+            <div class="credential"><strong>Bachelor's in Electrical Engineering</strong><span>Universidad Fidélitas</span></div>
+            <div class="credential"><strong>Lean Six Sigma Black Belt Executive</strong><span>Process improvement & operational discipline</span></div>
+            <div class="credential"><strong>Software validation & risk management</strong><span>AAMI continuing education</span></div>
+            <div class="credential"><strong>Automation & applied AI</strong><span>Product-focused software and workflow design</span></div>
+            <div class="credential"><strong>English & Spanish</strong><span>Professional English · Native/bilingual Spanish</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__inner split-grid">
+          <div class="section__heading">
+            <span class="eyebrow" data-i18n="about.video.eyebrow">The thinking behind the service</span>
+            <h2 data-i18n="about.video.title">Cybersecurity starts with how we think.</h2>
+            <p data-i18n="about.video.text">In this video from Nomandant’s Point of View, Nicolas explains why many digital-safety decisions begin with awareness, healthy skepticism, and ordinary common sense. That perspective is also the foundation of Unbound Root: make the system understandable before asking people to navigate it.</p>
+            <p class="mt-4" data-i18n="about.video.connection">The video provides the philosophy; Unbound Root turns it into practical education, resources, and personalized conversations.</p>
+          </div>
+          <article class="resource-card">
+            <div class="resource-card__media">
+              <span class="yt-facade" data-yt-facade data-video-id="_eW9iZK9l7w" data-video-title="Cybersecurity Is Just Common Sense" role="button" tabindex="0" aria-label="Play video: Cybersecurity Is Just Common Sense">
+                <img src="https://i.ytimg.com/vi/_eW9iZK9l7w/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async">
+                <span class="yt-facade-play" aria-hidden="true"></span>
+              </span>
+            </div>
+            <div class="resource-card__body">
+              <h3 data-i18n="about.video.cardTitle">Cybersecurity Is Just Common Sense</h3>
+              <p data-i18n="about.video.cardText">A personal perspective from Nomandant’s Point of View on awareness, identity, and safer digital decisions.</p>
+              <a class="button button--primary" href="https://youtu.be/_eW9iZK9l7w" target="_blank" rel="noopener noreferrer" data-i18n="about.video.button">Watch on YouTube</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__inner">
+          <div class="section__heading">
+            <span class="eyebrow" data-i18n="about.principles.eyebrow">How the work is approached</span>
+            <h2 data-i18n="about.principles.title">Rigor in the thinking. Simplicity in the answer.</h2>
+          </div>
+          <div class="card-grid">
+            <article class="feature-card">
+              <h3 data-i18n="about.principle1.title">Understand before prescribing</h3>
+              <p data-i18n="about.principle1.text">Start with the people, goals, constraints, devices, and habits involved. A useful recommendation begins with context.</p>
+            </article>
+            <article class="feature-card">
+              <h3 data-i18n="about.principle2.title">Use evidence with empathy</h3>
+              <p data-i18n="about.principle2.text">Combine technical experience and structured analysis with language that respects different ages, abilities, and comfort levels.</p>
+            </article>
+            <article class="feature-card">
+              <h3 data-i18n="about.principle3.title">Prioritize what creates value</h3>
+              <p data-i18n="about.principle3.text">Choose improvements that reduce risk and complexity in proportion to the real situation—not a checklist with no end.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--ink">
+        <div class="section__inner">
+          <div class="section__heading">
+            <span class="eyebrow" data-i18n="about.mission.eyebrow">The mission</span>
+            <h2 data-i18n="about.mission.title">Build safer habits without taking away agency.</h2>
+            <p data-i18n="about.mission.text">Freedom of thought, strong identity, privacy, and informed choice belong at the center of digital safety. Unbound Root exists to help people make decisions they understand and can sustain.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--white">
+        <div class="section__inner split-grid">
+          <div class="quote-card">
+            <blockquote data-i18n="about.quote">“Technology is not the objective. Business value—and human understanding—is.”</blockquote>
+            <cite>— Nicolas Figueroa</cite>
+          </div>
+          <div class="section__heading">
+            <span class="eyebrow" data-i18n="about.next.eyebrow">Start where you are</span>
+            <h2 data-i18n="about.next.title">You do not need a technical background.</h2>
+            <p data-i18n="about.next.text">Bring the question or concern as it is. The first conversation is about understanding the situation and identifying a reasonable next step.</p>
+            <div class="mt-7"><a class="button button--primary" href="./contact.html" data-i18n="about.next.cta">Start a conversation</a></div>
+          </div>
+        </div>
       </section>
     </main>
 
-  </body>
-
-  <footer class="site-footer">
-      <p>This is the official unboundroot.com site hosted via GitHub Pages.</p>
-      <div class="compliance" id="policies">
-        <a href="./privacy_policy.html" data-i18n="footer.privacy">Privacy Policy</a> | 
-        <a href="./terms_of_service.html" data-i18n="footer.terms">Terms of Service</a>
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="site-footer__brand"><a class="brand" href="/" aria-label="Unbound Root home"><img class="brand__mark" src="./images/unboundroot_logo.webp" alt="" width="512" height="512"><span class="brand__text">Unbound Root</span></a><p data-i18n="footer.summary">Clear digital-safety education and personalized guidance for families and everyday technology users.</p></div>
+        <div><h2 class="footer-heading" data-i18n="footer.explore">Explore</h2><div class="footer-links"><a href="./about.html" data-i18n="nav.about">About</a><a href="./services.html" data-i18n="nav.services">Services</a><a href="./contact.html" data-i18n="nav.contact">Contact</a></div></div>
+        <div><h2 class="footer-heading" data-i18n="footer.important">Important</h2><div class="footer-links"><a href="./privacy_policy.html" data-i18n="footer.privacy">Privacy Policy</a><a href="./terms_of_service.html" data-i18n="footer.terms">Terms of Service</a><a href="mailto:nitem18@hotmail.com">nitem18@hotmail.com</a></div></div>
       </div>
-      <p data-i18n="footer.copyright">© 2026 Unbound Root. All rights reserved.</p>
-  </footer>
-
-  <script type="module" src="./js/main.js"></script>
-
+      <div class="site-footer__bottom">&copy; 2026 Unbound Root. All rights reserved.</div>
+    </footer>
+    <script type="module" src="./js/main.js"></script>
+  </body>
 </html>

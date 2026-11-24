@@ -15,6 +15,7 @@
   <title>Política de Privacidad - Unbound Root</title>
 </head>
 <body data-legal-page="privacy">
+  <a class="skip-link" href="#main-content">Ir al contenido principal</a>
   <nav class="navbar">
     <div class="logo"><img src="./images/unboundroot_logo.webp" alt="Logotipo de Unbound Root" width="512" height="512"></div>
     <ul class="nav-links" id="nav-links">
@@ -23,10 +24,7 @@
       <li><a href="./services.html">Servicios</a></li>
       <li><a href="./contact.html">Contacto</a></li>
     </ul>
-    <div id="language-switcher" class="language-switcher" aria-label="Selector de idioma">
-      <button type="button" data-legal-lang="en" hidden><span class="flag flag-us" aria-hidden="true"></span>English</button>
-      <button type="button" data-legal-lang="es" class="active"><span class="flag flag-cr" aria-hidden="true"></span>Spanish</button>
-    </div>
+    <div id="language-switcher" class="language-picker" aria-label="Idioma"><button class="language-switcher" type="button" data-language-trigger aria-expanded="false" aria-controls="language-menu"><span class="flag flag--cr" data-current-flag aria-hidden="true"></span><span data-current-language>Español</span><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="m5 7 5 5 5-5H5Z"/></svg></button><div class="language-menu" id="language-menu" hidden><button class="language-option" type="button" data-legal-lang="en"><span class="flag flag--us" aria-hidden="true"></span>English</button><button class="language-option" type="button" data-legal-lang="es"><span class="flag flag--cr" aria-hidden="true"></span>Español</button></div></div>
   </nav>
 
   <header class="page-shell">
@@ -38,7 +36,7 @@
     <p><strong>Fecha de vigencia:</strong> 25 de julio de 2026</p>
   </header>
 
-  <main>
+  <main id="main-content">
     <section class="page-section">
       <p>Esta Política de Privacidad explica cómo Unbound Root, operado por Nicolas Figueroa Hidalgo, recopila, utiliza y protege la información personal de las personas que visitan el sitio web y utilizan nuestros servicios.</p>
     </section>
@@ -61,10 +59,7 @@
   </main>
 
   <footer class="site-footer">
-    <p>This is the official unboundroot.com site hosted via GitHub Pages.</p>
-    <p>Política de Privacidad - Edición de cumplimiento global | Unbound Root | Vigente desde el 25 de julio de 2026</p>
-    <p>&copy; 2026 Unbound Root. Todos los derechos reservados.</p>
-    <p><a href="./privacy_policy.html">English</a> | <a href="./terms_of_service_es.html">Términos de Servicio</a></p>
+    <div class="site-footer__bottom">&copy; 2026 Unbound Root. Política de Privacidad vigente desde el 25 de julio de 2026.</div>
   </footer>
   <script type="module" src="./js/legal-language.js"></script>
 </body>

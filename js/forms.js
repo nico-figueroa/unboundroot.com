@@ -3,7 +3,10 @@ export function initContactForms() {
     const forms = document.querySelectorAll('.contact-form');
 
     forms.forEach((form) => {
-        const formStatus = document.getElementById('form-status');
+        const adjacentStatus = form.nextElementSibling?.matches('.form-status') ? form.nextElementSibling : null;
+        const formStatus = form.querySelector('.form-status')
+            || adjacentStatus
+            || document.getElementById('form-status');
 
         if (formStatus) {
             form.addEventListener('submit', async (event) => {
@@ -12,7 +15,9 @@ export function initContactForms() {
                 const contactForm = event.target;
                 const honeypot = contactForm.querySelector('input[name="website"]');
                 if (honeypot?.value.trim()) {
-                    formStatus.textContent = 'Please leave the website field blank and try again.';
+                    formStatus.textContent = document.documentElement.lang === 'es-CR'
+                        ? 'Deje vacío el campo de sitio web e intente de nuevo.'
+                        : 'Please leave the website field blank and try again.';
                     formStatus.className = 'form-status error';
                     return;
                 }
@@ -22,8 +27,8 @@ export function initContactForms() {
                 const originalLabel = submitButton ? (isInputButton ? submitButton.value : submitButton.textContent) : 'Submit';
                 
                 if (submitButton) {
-                    if (isInputButton) submitButton.value = 'Sending...';
-                    else submitButton.textContent = 'Sending...';
+                    if (isInputButton) submitButton.value = 'Sending…';
+                    else submitButton.textContent = 'Sending…';
                     submitButton.disabled = true;
                 }
 
@@ -48,13 +53,17 @@ export function initContactForms() {
                         throw new Error('Submission failed');
                     }
 
-                    formStatus.textContent = 'Thank you! Your message was sent.';
+                    formStatus.textContent = document.documentElement.lang === 'es-CR'
+                        ? '¡Gracias! Su mensaje fue enviado.'
+                        : 'Thank you! Your message was sent.';
                     formStatus.className = 'form-status success';
                     contactForm.reset();
 
                 } catch (error) {
 
-                    formStatus.textContent = 'Sorry, your message could not be sent right now. Please contact us directly at nitem18@hotmail.com.';
+                    formStatus.textContent = document.documentElement.lang === 'es-CR'
+                        ? 'No se pudo enviar su mensaje. Escríbanos directamente a nitem18@hotmail.com.'
+                        : 'Sorry, your message could not be sent right now. Please contact us directly at nitem18@hotmail.com.';
                     formStatus.className = 'form-status error';
 
                 } finally {

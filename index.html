@@ -4,90 +4,206 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="Content-Security-Policy"
-      content="
-        default-src 'self';
-        script-src 'self';
-        style-src 'self';
-        form-action 'self';
-        connect-src 'self' ws://127.0.0.1:5501;
-        img-src 'self' https://i.ytimg.com;
-        object-src 'none';
-        base-uri 'self';
-      ">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; form-action 'self'; connect-src 'self' ws://127.0.0.1:5501; img-src 'self' https://i.ytimg.com; object-src 'none'; base-uri 'self';">
     <meta http-equiv="Strict-Transport-Security" content="max-age=63072000; includeSubDomains; preload">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta name="description" content="Learn practical cybersecurity and digital safety skills with Unbound Root through family guidance, education, and personalized online safety assessments.">
+    <meta name="description" content="Practical digital-safety education and personal guidance from Unbound Root for families, parents, and everyday technology users.">
+    <meta name="theme-color" content="#f7f6f1">
     <link rel="icon" href="./images/favicon-32.png" sizes="32x32" type="image/png">
     <link rel="apple-touch-icon" href="./images/favicon-180.png">
     <link href="styles.css" rel="stylesheet">
     <link rel="canonical" href="https://unboundroot.com/">
-    <title>Unbound Root | Practical Online Safety Education Services</title>
+    <title>Unbound Root | Confident Digital Safety for Every Generation</title>
   </head>
-
   <body>
-    <nav class="navbar">
-      <div class="logo">
-        <img src="./images/unboundroot_logo.webp" alt="Unbound Root Logo" width="512" height="512">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="brand" href="/" aria-label="Unbound Root home">
+          <img class="brand__mark" src="./images/unboundroot_logo.webp" alt="" width="512" height="512">
+          <span class="brand__text">Unbound Root</span>
+        </a>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+        <nav class="site-nav" id="primary-nav" data-open="false" aria-label="Primary navigation">
+          <ul class="nav-list">
+            <li class="nav-current"><a href="/" data-i18n="nav.home">Home</a></li>
+            <li><a href="./about.html" data-i18n="nav.about" class="nav-link">About</a></li>
+            <li><a href="./services.html" data-i18n="nav.services" class="nav-link">Services</a></li>
+            <li><a href="./contact.html" data-i18n="nav.contact" class="nav-link">Contact</a></li>
+          </ul>
+          <div class="nav-actions">
+            <div id="language-switcher" class="language-picker" data-i18n-attr="aria-label" data-i18n="nav.languageSwitcher">
+              <button class="language-switcher" type="button" data-language-trigger aria-expanded="false" aria-controls="language-menu"><span class="flag flag--us" data-current-flag aria-hidden="true"></span><span data-current-language>English</span><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="m5 7 5 5 5-5H5Z"/></svg></button>
+              <div class="language-menu" id="language-menu" hidden>
+                <button class="language-option" type="button" data-lang="en"><span class="flag flag--us" aria-hidden="true"></span>English</button>
+                <button class="language-option" type="button" data-lang="es"><span class="flag flag--cr" aria-hidden="true"></span>Español</button>
+              </div>
+            </div>
+            <a class="button button--primary" href="./contact.html" data-i18n="nav.cta">Start a conversation</a>
+          </div>
+        </nav>
       </div>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="/" data-i18n="nav.home">Home</a></li>
-        <li><a href="./about.html" data-i18n="nav.about">About</a></li>
-        <li><a href="./services.html" data-i18n="nav.services">Services</a></li>
-        <li><a href="./contact.html" data-i18n="nav.contact">Contact</a></li>
-      </ul>
-      <div id="language-switcher" class="language-switcher" data-i18n-attr="aria-label" data-i18n="nav.languageSwitcher">
-        <button type="button" data-lang="en" class="active"><span class="flag flag-us" aria-hidden="true"></span>English</button>
-        <button type="button" data-lang="es" hidden><span class="flag flag-cr" aria-hidden="true"></span>Spanish</button>
-      </div>
-    </nav>
+    </header>
 
-    <main class="page-shell">
-      <section class="hero page-section" id="hero">
-        <h1 data-i18n="hero.title">Unbound Root</h1>
-        <h2 data-i18n="hero.subtitle">Cyberspace Education and Awareness</h2>
-        <p class="muted" data-i18n="hero.detail">Short lessons, downloadable guides, and tailored assessments to keep yourself and your family safer online.</p>
-        <p><a class="btn-primary" href="./services.html#assessment" data-i18n="hero.cta">Request a personalized assessment</a></p>
+    <main id="main-content">
+      <section class="page-hero">
+        <div class="page-hero__inner">
+          <div class="page-hero__copy">
+            <span class="eyebrow" data-i18n="hero.eyebrow">Practical guidance. Human perspective.</span>
+            <h1 data-i18n="hero.title">Make every digital choice with more confidence.</h1>
+            <p class="page-hero__lead" data-i18n="hero.detail">Unbound Root turns complex online risks into clear, practical steps for families, parents, and everyday technology users.</p>
+            <div class="page-hero__actions">
+              <a class="button button--primary" href="./contact.html" data-i18n="hero.cta">Start a conversation</a>
+              <a class="button button--secondary" href="./services.html" data-i18n="hero.secondary">Explore resources</a>
+            </div>
+          </div>
+          <div class="hero-visual" aria-hidden="true">
+            <img class="hero-visual__image" src="./images/ur_background.webp" alt="" width="1200" height="800" fetchpriority="high">
+            <div class="hero-visual__note">
+              <strong data-i18n="hero.note.label">Digital safety, without the overwhelm</strong>
+              <span data-i18n="hero.note.text">Understand the risk. Choose the next step. Build safer habits.</span>
+            </div>
+          </div>
+        </div>
       </section>
-      <section class="page-section" id="services">
-        <h2 data-i18n="services.intro.title">Stay safe online</h2>
-        <p class="section-lead" data-i18n="services.intro.text">Start here</p>
-        <ul class="card-list" role="list">
-          <li class="card-item">
-            <a href="./services.html#offerings" class="card-link">
-              <img src="https://i.ytimg.com/vi/_eW9iZK9l7w/hqdefault.jpg" alt="Cybersecurity educational video thumbnail" width="480" height="360" loading="lazy" decoding="async">
-              <span data-i18n="services.lesson.title">Educational Video: Cybersecurity</span>
-            </a>
-          </li>
-          <li class="card-item">
-            <a href="./services.html#assessment" class="card-link">
-              <img src="./images/personalized-assessment.webp" alt="Assessment placeholder" width="640" height="426" loading="lazy" decoding="async">
-              <span data-i18n="services.assessment.submit">Request a personalized assessment</span>
-            </a>
-          </li>
-          <li class="card-item">
-            <a href="./services.html#topics" class="card-link">
-              <img src="./images/topics-covered.webp" alt="Topics covered" width="640" height="426" loading="lazy" decoding="async">
-              <span data-i18n="services.topics.title">Topics we cover</span>
-            </a>
-          </li>
-        </ul>
+
+      <aside class="trust-strip" aria-label="Service benefits">
+        <div class="trust-strip__inner">
+          <div class="trust-item">
+            <span class="trust-item__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"/></svg></span>
+            <div><strong data-i18n="trust.practical.title">Practical by design</strong><span data-i18n="trust.practical.text">Clear steps you can apply today</span></div>
+          </div>
+          <div class="trust-item">
+            <span class="trust-item__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></span>
+            <div><strong data-i18n="trust.bilingual.title">English & Spanish</strong><span data-i18n="trust.bilingual.text">Guidance in the language that fits</span></div>
+          </div>
+          <div class="trust-item">
+            <span class="trust-item__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3 4 6v5c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+            <div><strong data-i18n="trust.personal.title">Personal, not generic</strong><span data-i18n="trust.personal.text">Advice shaped around real needs</span></div>
+          </div>
+        </div>
+      </aside>
+
+      <section class="section section--white">
+        <div class="section__inner">
+          <div class="section__heading">
+            <span class="eyebrow" data-i18n="home.help.eyebrow">Who we help</span>
+            <h2 data-i18n="home.help.title">Digital safety support for real life.</h2>
+            <p data-i18n="home.help.text">Whether you are protecting a child, supporting older relatives, or improving your own habits, the next step should feel clear and manageable.</p>
+          </div>
+          <div class="card-grid">
+            <article class="feature-card">
+              <span class="feature-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 11a4 4 0 1 1 8 0M4 21c.8-4.2 3.5-6 8-6s7.2 1.8 8 6M19 5v4M17 7h4"/></svg></span>
+              <h3 data-i18n="home.audience.parents.title">Parents & caregivers</h3>
+              <p data-i18n="home.audience.parents.text">Set boundaries, configure devices, discuss risks, and build conversations that continue beyond a single rule.</p>
+              <a href="./services.html#assessment" data-i18n="home.audience.parents.cta">Shape a family plan</a>
+            </article>
+            <article class="feature-card">
+              <span class="feature-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11 12 4l9 7v9H3v-9Z"/><path d="M9 20v-6h6v6"/></svg></span>
+              <h3 data-i18n="home.audience.families.title">Multigenerational households</h3>
+              <p data-i18n="home.audience.families.text">Create shared habits that respect different ages, abilities, devices, and levels of technology confidence.</p>
+              <a href="./services.html#topics" data-i18n="home.audience.families.cta">Browse topics</a>
+            </article>
+            <article class="feature-card">
+              <span class="feature-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 22h8M12 18v4"/></svg></span>
+              <h3 data-i18n="home.audience.individuals.title">Everyday technology users</h3>
+              <p data-i18n="home.audience.individuals.text">Recognize scams, reduce exposure, protect accounts, and feel more capable with the tools you already use.</p>
+              <a href="./services.html#resources" data-i18n="home.audience.individuals.cta">Start with a free guide</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__inner split-grid">
+          <div class="image-frame">
+            <img src="./images/personalized-assessment.webp" alt="A person reviewing a personalized digital-safety plan" width="640" height="426" loading="lazy" decoding="async">
+          </div>
+          <div class="section__heading">
+            <span class="eyebrow" data-i18n="home.approach.eyebrow">A focused approach</span>
+            <h2 data-i18n="home.approach.title">Start with what matters to you.</h2>
+            <p data-i18n="home.approach.text">Unbound Root combines educational content with an individualized conversation. The result is not a flood of security jargon, but a prioritized path suited to your household, comfort level, and goals.</p>
+            <ul class="value-list">
+              <li class="value-item"><span class="value-item__number">1</span><div><h3 data-i18n="home.approach.item1.title">Understand the situation</h3><p data-i18n="home.approach.item1.text">Name the people, devices, concerns, and habits involved.</p></div></li>
+              <li class="value-item"><span class="value-item__number">2</span><div><h3 data-i18n="home.approach.item2.title">Prioritize the right actions</h3><p data-i18n="home.approach.item2.text">Focus on practical improvements with the greatest value.</p></div></li>
+              <li class="value-item"><span class="value-item__number">3</span><div><h3 data-i18n="home.approach.item3.title">Build confidence over time</h3><p data-i18n="home.approach.item3.text">Learn the why behind each step and return for deeper support.</p></div></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--ink">
+        <div class="section__inner">
+          <div class="section__heading">
+            <span class="eyebrow" data-i18n="home.process.eyebrow">Simple path forward</span>
+            <h2 data-i18n="home.process.title">From concern to a clearer next step.</h2>
+            <p data-i18n="home.process.text">You do not need to know which service to choose. Begin with the situation, and the conversation will clarify the path.</p>
+          </div>
+          <ol class="process-list">
+            <li class="process-step"><span class="process-step__number">1</span><h3 data-i18n="home.process.step1.title">Share your needs</h3><p data-i18n="home.process.step1.text">Send a message describing the question, risk, or change you want to address.</p></li>
+            <li class="process-step"><span class="process-step__number">2</span><h3 data-i18n="home.process.step2.title">Clarify the priorities</h3><p data-i18n="home.process.step2.text">Identify the most useful next action, resource, or personalized assessment.</p></li>
+            <li class="process-step"><span class="process-step__number">3</span><h3 data-i18n="home.process.step3.title">Move forward with confidence</h3><p data-i18n="home.process.step3.text">Use a practical recommendation you can understand, explain, and sustain.</p></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section section--white">
+        <div class="section__inner split-grid">
+          <div class="section__heading">
+            <span class="eyebrow" data-i18n="home.founder.eyebrow">Experience behind the guidance</span>
+            <h2 data-i18n="home.founder.title">Systems thinking, translated for people.</h2>
+            <p data-i18n="home.founder.text">Founder Nicolas Figueroa brings together electrical engineering, information management, process improvement, software validation, risk management, automation, and applied AI. His focus is to simplify the system before adding more technology.</p>
+            <div class="mt-7"><a class="button button--secondary" href="./about.html" data-i18n="home.founder.cta">Meet Nicolas & the approach</a></div>
+          </div>
+          <div class="quote-card">
+            <blockquote data-i18n="home.founder.quote">“Technology is useful when it reduces confusion, supports better decisions, and helps people act with confidence.”</blockquote>
+            <cite>— Nicolas Figueroa, Founder</cite>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="cta-panel">
+          <h2 data-i18n="home.cta.title">What would make your digital life feel safer?</h2>
+          <p data-i18n="home.cta.text">Share the concern, goal, or question you have today. You do not need a perfect description to start.</p>
+          <div class="cta-panel__actions">
+            <a class="button button--light" href="./contact.html" data-i18n="home.cta.primary">Start a conversation</a>
+            <a class="button button--secondary" href="./services.html#assessment" data-i18n="home.cta.secondary">Request an assessment</a>
+          </div>
+        </div>
       </section>
     </main>
 
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="site-footer__brand">
+          <a class="brand" href="/" aria-label="Unbound Root home">
+            <img class="brand__mark" src="./images/unboundroot_logo.webp" alt="" width="512" height="512">
+            <span class="brand__text">Unbound Root</span>
+          </a>
+          <p data-i18n="footer.summary">Clear digital-safety education and personalized guidance for families and everyday technology users.</p>
+        </div>
+        <div>
+          <h2 class="footer-heading" data-i18n="footer.explore">Explore</h2>
+          <div class="footer-links">
+            <a href="./about.html" data-i18n="nav.about">About</a>
+            <a href="./services.html" data-i18n="nav.services">Services</a>
+            <a href="./contact.html" data-i18n="nav.contact">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h2 class="footer-heading" data-i18n="footer.important">Important</h2>
+          <div class="footer-links">
+            <a href="./privacy_policy.html" data-i18n="footer.privacy">Privacy Policy</a>
+            <a href="./terms_of_service.html" data-i18n="footer.terms">Terms of Service</a>
+            <a href="mailto:nitem18@hotmail.com">nitem18@hotmail.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="site-footer__bottom">&copy; 2026 Unbound Root. All rights reserved.</div>
+    </footer>
+    <script type="module" src="./js/main.js"></script>
   </body>
-
-  <footer class="site-footer">
-    <p>This is the official unboundroot.com site hosted via GitHub Pages.</p>
-    <p>&copy; 2026 Unbound Root. All rights reserved.</p>
-    <p>Designed and built with ❤️ by the Unbound Root team.</p>
-    <p>Follow us on social media!</p>
-    <div class="compliance" id="policies">
-      <a href="./privacy_policy.html" data-i18n="footer.privacy">Privacy Policy</a> | 
-      <a href="./terms_of_service.html" data-i18n="footer.terms">Terms of Service</a>
-    </div>
-  </footer>
-
-  <script type="module" src="./js/main.js"></script>
-
 </html>

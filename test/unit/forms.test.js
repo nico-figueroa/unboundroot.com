@@ -5,6 +5,7 @@ describe('contact forms', () => {
   let fetchCalls;
 
   beforeEach(() => {
+    document.documentElement.lang = 'en';
     document.body.innerHTML = `
       <form class="contact-form">
         <div class="form-honeypot" aria-hidden="true">

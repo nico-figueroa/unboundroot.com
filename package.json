@@ -3,13 +3,17 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "build:css": "tailwindcss -i ./styles.source.css -o ./styles.css --minify",
+    "watch:css": "tailwindcss -i ./styles.source.css -o ./styles.css --watch",
     "test:unit": "mocha --require ./test/setup.js \"test/unit/**/*.test.js\"",
     "test:e2e": "mocha \"test/e2e/**/*.test.js\" --timeout 30000",
-    "test": "npm run test:unit && npm run test:e2e"
+    "test": "npm run build:css && npm run test:unit && npm run test:e2e"
   },
   "devDependencies": {
+    "@tailwindcss/cli": "^4.3.5",
     "jsdom": "^31.0.0",
     "mocha": "^12.0.3",
-    "selenium-webdriver": "^4.52.0"
+    "selenium-webdriver": "^4.52.0",
+    "tailwindcss": "^4.3.5"
   }
 }
